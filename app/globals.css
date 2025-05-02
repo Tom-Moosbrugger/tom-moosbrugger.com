@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* :root {
+@custom-variant dark (&:where(.dark, .dark *));
 
-} */
+@theme {
+  --color-green: #13CF8A;
+  /* --color-green: rgb(19 207 138 / .81) */
 
-/* @theme {
-
-} */
+}

@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, VT323 } from "next/font/google";
+import { terminal, jetBrainsMono, ibm } from "@/lib/fonts";
 import "./globals.css";
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-})
-
-const terminal = VT323({
-  weight: ["400"],
-  subsets: ["latin"]
-})
 
 export const metadata: Metadata = {
   title: "Tom Moosbrugger",
@@ -23,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${terminal.className}`}>
+      <body className={`${ibm.className} antialiased`}>
         {children}
       </body>
     </html>

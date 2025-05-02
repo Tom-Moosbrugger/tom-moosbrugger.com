@@ -9,7 +9,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Tom Moosbrugger",
-  description: "Portfolio website for Tom Moosbrugger, full-stack",
+  description: "Portfolio website for Tom Moosbrugger, full-stack developer extraordinaire",
 };
 
 export default function RootLayout({

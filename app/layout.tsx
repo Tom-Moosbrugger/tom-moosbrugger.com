@@ -15,25 +15,48 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (() => {
-              const storedMode = localStorage.getItem('mode');
-              if (storedMode === 'light') {
-                document.documentElement.className = '';
-              } else {
-                document.documentElement.className = 'dark';
-              }
-            })();
-          `,
-        }}
-      />
-      <body className={`${ibm.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          (() => {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'light') {
+              document.documentElement.className = '';
+            } else {
+              document.documentElement.className = 'dark';
+            }
+          })();
+        `,
+          }}
+        />
+      </head>
+      <body className={`${ibm.className} antialiased bg-white text-black dark:text-white dark:bg-black`}>
         <Navbar />
         {children}
       </body>
     </html>
   );
 }
+
+/*
+
+       <Script
+          id="theme-switcher"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            (() => {
+              const storedTheme = localStorage.getItem('theme');
+              if (storedTheme === 'light') {
+                document.documentElement.className = '';
+              } else {
+                document.documentElement.className = 'dark';
+              }
+            })();
+          `,
+          }}
+        />
+
+*/

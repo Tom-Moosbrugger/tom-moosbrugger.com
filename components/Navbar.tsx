@@ -6,46 +6,61 @@ import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
-    const [mode, setMode] = useState("dark");
+//   const [theme, setTheme] = useState("dark");
+const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'dark';
+    }
+    return 'dark';
+  });
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-      if (typeof window !== undefined) {
-        const storedMode = window.localStorage.getItem("mode");
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      const storedTheme = window.localStorage.getItem("theme");
 
-        if (storedMode === "light") {
-          setMode("light");
-        } else {
-          setMode("dark");
-          window.localStorage.setItem("mode", "dark");
-        }
+      if (storedTheme === "light") {
+        setTheme("light");
+      } else {
+        setTheme("dark");
+        window.localStorage.setItem("theme", "dark");
       }
-    }, []);
 
-    const toggleMode = () => {
-      const newMode = mode === "dark" ? "light" : "dark";
+      setLoading(false);
+    }
+  }, []);
 
-      window.localStorage.setItem("mode", newMode);
+  const toggleMode = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
 
-      setMode(newMode);
+    window.localStorage.setItem("theme", newTheme);
 
-      document.documentElement.className = newMode === "dark" ? "dark" : "";
-    };
+    setTheme(newTheme);
+
+    document.documentElement.className = newTheme === "dark" ? "dark" : "";
+  };
 
   return (
-    <nav className="flex flex-row justify-between bg-white dark:bg-black">
-      <h1 className="text-keyword dark:text-component">
+    <nav className="flex flex-row justify-between bg-white dark:bg-black px-4 py-4">
+      <Link href='/' className="text-keyword dark:text-component">
         <span className="text-bracket">&lt;</span>
         TomMoosbrugger
         <span className="text-bracket"> &#47;&gt;</span>
-      </h1>
-      <div onClick={toggleMode} className="cursor-pointer">
-        {mode === "dark" ? (
-          <SunIcon className="size-6 fill-amber-300 stroke-amber-300" />
-        ) : (
-          <MoonIcon className="size-6  fill-blue-200 stroke-blue-200" />
-        )}
+      </Link>
+      <div onClick={toggleMode} className="cursor-pointer flex justify-center">
+        {!loading ? (
+          theme === "dark" ? (
+            <SunIcon className="size-6 fill-amber-300 stroke-amber-300" />
+          ) : (
+            <MoonIcon className="size-6  fill-blue-200 stroke-blue-200" />
+          )
+        ) : null}
       </div>
-      <div></div>
+      <div className="flex flex-row gap-5">
+        <Link href="/projects" className="text-keyword dark:text-component">Projects</Link>
+        <Link href="/TomMoosbrugger_Resume.pdf" className="text-keyword dark:text-component">Resume</Link>
+        <Link href="/contact" className="text-keyword dark:text-component">Contact</Link>
+      </div>
     </nav>
   );
 };

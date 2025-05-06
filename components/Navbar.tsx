@@ -6,13 +6,7 @@ import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
-//   const [theme, setTheme] = useState("dark");
-const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'dark';
-    }
-    return 'dark';
-  });
+  const [theme, setTheme] = useState("dark");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -41,7 +35,7 @@ const [theme, setTheme] = useState(() => {
   };
 
   return (
-    <nav className="flex flex-row justify-between bg-white dark:bg-black px-4 py-4">
+    <nav className="flex flex-row justify-between bg-white dark:bg-black pl-2 pr-6 py-4">
       <Link href='/' className="text-keyword dark:text-component">
         <span className="text-bracket">&lt;</span>
         TomMoosbrugger
@@ -56,10 +50,10 @@ const [theme, setTheme] = useState(() => {
           )
         ) : null}
       </div>
-      <div className="flex flex-row gap-5">
-        <Link href="/projects" className="text-keyword dark:text-component">Projects</Link>
-        <Link href="/TomMoosbrugger_Resume.pdf" className="text-keyword dark:text-component">Resume</Link>
-        <Link href="/contact" className="text-keyword dark:text-component">Contact</Link>
+      <div className="flex flex-row gap-8">
+        <Link href="/projects" className="text-keyword dark:text-component link-with-brackets">Projects</Link>
+        <Link href="/TomMoosbrugger_Resume.pdf" className="text-keyword dark:text-component link-with-brackets">Resume</Link>
+        <Link href="/contact" className="text-keyword dark:text-component link-with-brackets">Contact</Link>
       </div>
     </nav>
   );

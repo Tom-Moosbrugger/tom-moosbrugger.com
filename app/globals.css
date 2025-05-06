@@ -10,3 +10,17 @@
   --color-function: #DCDCAA;
   --color-number: #B5CEA8;
 }
+
+@layer components {
+  .link-with-brackets:hover::before {
+    content: '<';
+    color: var(--color-bracket);
+    left: -1em;
+  }
+
+  .link-with-brackets:hover::after {
+    content: '/>';
+    color: var(--color-bracket);
+    right: -1em;
+  }
+}

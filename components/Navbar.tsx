@@ -6,31 +6,30 @@ import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
-  const [mode, setMode] = useState("dark");
+    const [mode, setMode] = useState("dark");
 
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      const storedMode = window.localStorage.getItem("mode");
+    useEffect(() => {
+      if (typeof window !== undefined) {
+        const storedMode = window.localStorage.getItem("mode");
 
-      if (storedMode === "light") {
-        setMode("light");
-        document.documentElement.className = "";
-      } else {
-        setMode("dark");
-        window.localStorage.setItem("mode", "dark");
+        if (storedMode === "light") {
+          setMode("light");
+        } else {
+          setMode("dark");
+          window.localStorage.setItem("mode", "dark");
+        }
       }
-    }
-  }, []);
+    }, []);
 
-  const toggleMode = () => {
-    const newMode = mode === "dark" ? "light" : "dark";
+    const toggleMode = () => {
+      const newMode = mode === "dark" ? "light" : "dark";
 
-    window.localStorage.setItem("mode", newMode);
+      window.localStorage.setItem("mode", newMode);
 
-    setMode(newMode);
+      setMode(newMode);
 
-    document.documentElement.className = newMode === "dark" ? "dark" : "";
-  };
+      document.documentElement.className = newMode === "dark" ? "dark" : "";
+    };
 
   return (
     <nav className="flex flex-row justify-between bg-white dark:bg-black">
@@ -46,9 +45,7 @@ const Navbar = () => {
           <MoonIcon className="size-6  fill-blue-200 stroke-blue-200" />
         )}
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </nav>
   );
 };

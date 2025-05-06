@@ -5,7 +5,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Tom Moosbrugger",
-  description: "Portfolio website for Tom Moosbrugger, full-stack developer extraordinaire",
+  description:
+    "Portfolio website for Tom Moosbrugger, full-stack developer extraordinaire",
 };
 
 export default function RootLayout({
@@ -15,6 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (() => {
+              const storedMode = localStorage.getItem('mode');
+              if (storedMode === 'light') {
+                document.documentElement.className = '';
+              } else {
+                document.documentElement.className = 'dark';
+              }
+            })();
+          `,
+        }}
+      />
       <body className={`${ibm.className} antialiased`}>
         <Navbar />
         {children}

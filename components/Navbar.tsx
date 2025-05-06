@@ -46,7 +46,9 @@ const Navbar = () => {
           <MoonIcon className="size-6  fill-blue-200 stroke-blue-200" />
         )}
       </div>
-      <div></div>
+      <div>
+        
+      </div>
     </nav>
   );
 };

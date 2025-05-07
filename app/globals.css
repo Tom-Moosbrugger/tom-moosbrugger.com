@@ -5,6 +5,7 @@
 @theme {
   --color-component: #4EC9B0;
   --color-keyword: #569CD6;
+  --color-property: #9CDCFE;
   --color-string: #CE9178;
   --color-bracket: #808080;
   --color-function: #DCDCAA;

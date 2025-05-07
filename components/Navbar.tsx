@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 import TMLink from "./TMLink";
-import Link from "next/link";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
@@ -37,19 +36,12 @@ const Navbar = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-white dark:bg-black pl-2 pr-6 py-4">
-      {/* <TMLink hRef="/" linkText="TomMoosbrugger" /> */}
-       <Link
-      href="/"
-      className="text-keyword hover:text-black  dark:text-component dark:hover:text-amber-200 font-medium"
-    >
-      <span className="text-bracket">&lt;</span>
-      TomMoosbrugger
-      <span className="text-bracket"> &#47;&gt;</span>
-    </Link>
+      <TMLink hRef="/" linkText="TomMoosbrugger" />
+
       <div className="flex flex-row gap-6">
-        <TMLink hRef="/projects" linkText="Projects" />
-        <TMLink hRef="/TomMoosbrugger_Resume.pdf" linkText="Resume" />
-        <TMLink hRef="/contact" linkText="Contact" />
+        <TMLink hRef="/" linkText="Projects" />
+        <TMLink hRef="/" linkText="Resume" />
+        <TMLink hRef="/" linkText="Contact" />
         <div
           onClick={toggleMode}
           className="cursor-pointer flex justify-center min-w-10"
@@ -61,7 +53,7 @@ const Navbar = () => {
           >
             {theme === "dark"
               ? !loading && (
-                  <SunIcon className="size-5 fill-amber-400 stroke-amber-400" />
+                  <SunIcon className="size-5 fill-amber-300 stroke-amber-300" />
                 )
               : !loading && (
                   <MoonIcon className="size-5  fill-blue-200 stroke-gray-500" />

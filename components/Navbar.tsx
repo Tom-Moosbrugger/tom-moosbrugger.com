@@ -38,25 +38,29 @@ const Navbar = () => {
   return (
     <nav className="flex flex-row justify-between bg-white dark:bg-black pl-2 pr-6 py-4">
       <TMLink hRef="/" linkText="TomMoosbrugger" />
-      
-      <div className="flex flex-row gap-8">
+
+      <div className="flex flex-row gap-6">
         <TMLink hRef="/projects" linkText="Projects" />
         <TMLink hRef="/TomMoosbrugger_Resume.pdf" linkText="Resume" />
         <TMLink hRef="/contact" linkText="Contact" />
-        <div onClick={toggleMode} className="cursor-pointer flex justify-center">
-        {!loading ? (
-          theme === "dark" ? (
-            <button className="border-1 border-bracket rounded-full py-0.5 px-3 cursor-pointer hover:bg-white">
-                <SunIcon className="size-5 fill-amber-400 stroke-amber-400" />
-            </button>
-          ) : (
-            <button className="border-1 border-bracket rounded-full py-0.5 px-3 cursor-pointer hover:bg-black">
-                <MoonIcon className="size-5  fill-blue-200 stroke-gray-500" />
-            </button>
-            
-          )
-        ) : null}
-      </div>
+        <div
+          onClick={toggleMode}
+          className="cursor-pointer flex justify-center min-w-10"
+        >
+          <button
+            className={`flex items-center justify-center border-1 border-bracket rounded-full py-0.5 min-w-8 min-h-7 cursor-pointer hover:bg-${
+              theme === "dark" ? "white" : "black"
+            }`}
+          >
+            {theme === "dark"
+              ? !loading && (
+                  <SunIcon className="size-5 fill-amber-400 stroke-amber-400" />
+                )
+              : !loading && (
+                  <MoonIcon className="size-5  fill-blue-200 stroke-gray-500" />
+                )}
+          </button>
+        </div>
       </div>
     </nav>
   );

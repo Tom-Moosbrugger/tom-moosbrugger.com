@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 import TMLink from "./TMLink";
+import Link from "next/link";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("dark");
@@ -36,8 +37,15 @@ const Navbar = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-white dark:bg-black pl-2 pr-6 py-4">
-      <TMLink hRef="/" linkText="TomMoosbrugger" />
-
+      {/* <TMLink hRef="/" linkText="TomMoosbrugger" /> */}
+       <Link
+      href="/"
+      className="text-keyword hover:text-black  dark:text-component dark:hover:text-amber-200 font-medium"
+    >
+      <span className="text-bracket">&lt;</span>
+      TomMoosbrugger
+      <span className="text-bracket"> &#47;&gt;</span>
+    </Link>
       <div className="flex flex-row gap-6">
         <TMLink hRef="/projects" linkText="Projects" />
         <TMLink hRef="/TomMoosbrugger_Resume.pdf" linkText="Resume" />

@@ -19,3 +19,19 @@ const TMLink = ({ linkText, hRef }: TMLinkProps) => {
 };
 
 export default TMLink;
+
+// alternate version that dynamically renders brackets:
+
+// <Link
+//  href={hRef}
+//  className="relative text-keyword hover:text-black dark:text-component dark:hover:text-amber-200 font-medium group" // Added 'group' for hover targeting
+// >
+//   <span className="text-bracket opacity-0 group-hover:opacity-100">
+//     &lt;
+//   </span>
+//     {linkText}
+//   <span className="text-bracket opacity-0 group-hover:opacity-100">
+//     {" "}
+//     &#47;&gt;
+//   </span>
+// </Link>

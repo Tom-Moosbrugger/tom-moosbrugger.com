@@ -35,10 +35,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-between bg-white dark:bg-black pl-2 pr-6 py-4">
+    <nav className="text-xs sm:text-base flex flex-row justify-between items-center pl-2 pr-6 py-4">
       <TMLink hRef="/" linkText="TomMoosbrugger" />
 
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-row items-center gap-2 sm:gap-6">
         <TMLink hRef="/" linkText="Projects" />
         <TMLink hRef="/" linkText="Resume" />
         <TMLink hRef="/" linkText="Contact" />

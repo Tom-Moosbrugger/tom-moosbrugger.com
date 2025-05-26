@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-interface TMLinkProps {
+interface NavLinkProps {
   linkText: string;
   hRef: string;
 }
 
-const TMLink = ({ linkText, hRef }: TMLinkProps) => {
+const NavLink = ({ linkText, hRef }: NavLinkProps) => {
   return (
     <Link
       href={hRef}
@@ -18,7 +18,7 @@ const TMLink = ({ linkText, hRef }: TMLinkProps) => {
   );
 };
 
-export default TMLink;
+export default NavLink;
 
 // alternate version that dynamically renders brackets:
 

@@ -5,8 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Tom Moosbrugger",
-  description:
-    "Portfolio website for Tom Moosbrugger, full-stack developer extraordinaire",
+  description: "Portfolio website for Tom Moosbrugger, full-stack developer",
 };
 
 export default function RootLayout({
@@ -17,6 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
+        {/* 
+          add script to check local storage for stored theme variable
+          if theme variable exists, set html element's classname to corresponding variable
+          if not, default theme to dark. 
+        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -32,7 +36,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${ibm.className} antialiased bg-white text-black dark:text-white dark:bg-black`}>
+      <body
+        className={`${ibm.className} antialiased bg-white text-black dark:text-white dark:bg-black`}
+      >
         <Navbar />
         {children}
       </body>

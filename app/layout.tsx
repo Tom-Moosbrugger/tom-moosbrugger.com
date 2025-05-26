@@ -45,24 +45,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/*
-
-       <Script
-          id="theme-switcher"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            (() => {
-              const storedTheme = localStorage.getItem('theme');
-              if (storedTheme === 'light') {
-                document.documentElement.className = '';
-              } else {
-                document.documentElement.className = 'dark';
-              }
-            })();
-          `,
-          }}
-        />
-
-*/

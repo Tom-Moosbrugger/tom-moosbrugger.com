@@ -9,7 +9,9 @@ const Navbar = () => {
   const [theme, setTheme] = useState("dark");
   const [loading, setLoading] = useState(true);
 
+  // check local storage for a stored theme
   useEffect(() => {
+    // check if window is defined before attempting to access its properties
     if (typeof window !== undefined) {
       const storedTheme = window.localStorage.getItem("theme");
 
@@ -24,13 +26,18 @@ const Navbar = () => {
     }
   }, []);
 
-  const toggleMode = () => {
+  // change theme
+  const toggleTheme = () => {
+    // determine if theme is light or dark
     const newTheme = theme === "dark" ? "light" : "dark";
 
+    // set localStorage theme variable to new theme
     window.localStorage.setItem("theme", newTheme);
 
+    // set slice of state to new theme
     setTheme(newTheme);
 
+    // grab the html element and set a class name of "dark" or "" depending on the theme
     document.documentElement.className = newTheme === "dark" ? "dark" : "";
   };
 
@@ -43,7 +50,7 @@ const Navbar = () => {
         <TMLink hRef="/" linkText="Resume" />
         <TMLink hRef="/" linkText="Contact" />
         <div
-          onClick={toggleMode}
+          onClick={toggleTheme}
           className="cursor-pointer flex justify-center min-w-10"
         >
           <button

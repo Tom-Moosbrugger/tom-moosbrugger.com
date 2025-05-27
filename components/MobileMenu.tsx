@@ -29,14 +29,13 @@ const MobileMenu = () => {
   }, []);
 
   return (
-    <div className="sm:hidden relative flex gap-2" ref={menuRef}>
+    <div className="sm:hidden relative" ref={menuRef}>
       <Bars3Icon
         className="size-7 border-1 cursor-pointer"
         onClick={() => setShowMenu(!showMenu)}
       />
-      <ThemeToggle />
       {showMenu && (
-        <div className="absolute top-8 right-12 flex flex-col items-center border-1 p-2 gap-2 min-w-42">
+        <div className="absolute bg-white dark:bg-black top-8 right-0 flex flex-col items-center border-1 p-2 gap-2 min-w-42 z-1">
           <div className="w-full border-b-1 text-center pb-2">
             <NavLink
               hRef="/projects"

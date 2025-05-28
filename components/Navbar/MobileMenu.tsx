@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import NavLink from "./NavLink";
-import ThemeToggle from "./ThemeToggle";
+import NavLink from "@/components/Navbar/NavLink";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
 // dropdown menu component for mobile devices

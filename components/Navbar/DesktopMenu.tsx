@@ -1,5 +1,4 @@
-import NavLink from "./NavLink";
-import ThemeToggle from "./ThemeToggle";
+import NavLink from "@/components/Navbar/NavLink";
 
 const DesktopMenu = () => {
   return (

@@ -10,6 +10,8 @@
   --color-bracket: #808080;
   --color-function: #DCDCAA;
   --color-number: #B5CEA8;
+  --shadow-dark: -10px 10px rgb(78 201 176);
+  --shadow-light: -10px 10px rgb(86 156 214);
 }
 
 @layer components {

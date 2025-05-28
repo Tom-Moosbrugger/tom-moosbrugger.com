@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { terminal, jetBrainsMono, ibm } from "@/lib/fonts";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {

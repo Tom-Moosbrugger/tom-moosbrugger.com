@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Welcome = () => {
   return (
-    <article className="flex flex-col md:flex-row gap-4 p-10 mx-20 my-10 border-1 rounded-lg">
+    <article className="flex flex-col md:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg">
       <section className="flex flex-col gap-2">
         <h1 className="text-component text-2xl">
           <span className="text-bracket">&lt;</span>
@@ -16,7 +16,7 @@ const Welcome = () => {
           </div>
           <div className="pl-5">
             My name is Tom Moosbrugger, and I'm a full-stack software developer.
-            I thrive on making applications and websites
+            I thrive on building scalable, maintainable applications and websites that users love.
           </div>
           <div className="text-keyword">
             <span className="text-bracket">&lt;&#47;</span>p
@@ -28,9 +28,9 @@ const Welcome = () => {
         <Image
           src="/Headshot.jpg"
           alt="Picture of the author"
-          width={300}
-          height={300}
-          className="rounded-lg object-cover min-w-[300px] min-h-[300px]"
+          width={250}
+          height={250}
+          className="rounded-lg object-cover min-w-[250px] min-h-[px] shadow-light dark:shadow-dark"
         />
       </section>
     </article>

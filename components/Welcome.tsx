@@ -5,23 +5,22 @@ import HTMLElement from "@/components/Elements/HTMLElement";
 const Welcome = () => {
   return (
     <article className="flex flex-col md:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg">
-      <section className="flex flex-col gap-2">
-        {/* <h1 className="text-component text-2xl">
-          <span className="text-bracket">&lt;</span>
-          Welcome
-          <span className="text-bracket"> &#47;&gt;</span>
-        </h1> */}
-        <ComponentElement className="text-keyword dark:text-component text-2xl" componentName="Welcome"/>
+      <section className="flex flex-col">
+        <ComponentElement
+          className="text-keyword dark:text-component text-4xl mb-4"
+          componentName="Welcome"
+        />
         <div>
-          
-          <p className="pl-5">
-            My name is Tom Moosbrugger, and I'm a full-stack software developer.
-            I thrive on building scalable, maintainable applications and websites that users love.
+          <HTMLElement elementName="h1" open={true} />
+            <h1 className="pl-5 text-2xl py-1">
+                Hi, my name is Tom Moosbrugger.
+            </h1>
+          <HTMLElement elementName="h1" open={false} className="mb-4"/>
+          <HTMLElement elementName="p" open={true} />
+          <p className="pl-5 py-1">
+            I&#39;m a full-stack software developer. I thrive on building applications and websites that users love.
           </p>
-          <div className="text-keyword">
-            <span className="text-bracket">&lt;&#47;</span>p
-            <span className="text-bracket">&gt;</span>
-          </div>
+          <HTMLElement elementName="p" open={false} className="mb-4"/>
         </div>
       </section>
       <section className="flex items-center justify-center">

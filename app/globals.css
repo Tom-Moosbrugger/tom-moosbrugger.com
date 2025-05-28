@@ -13,17 +13,3 @@
   --shadow-dark: -10px 10px rgb(78 201 176);
   --shadow-light: -10px 10px rgb(86 156 214);
 }
-
-@layer components {
-  .link-with-brackets:hover::before {
-    content: '<';
-    color: var(--color-bracket);
-    left: -1em;
-  }
-
-  .link-with-brackets:hover::after {
-    content: '/>';
-    color: var(--color-bracket);
-    right: -1em;
-  }
-}

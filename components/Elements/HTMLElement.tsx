@@ -4,12 +4,12 @@ interface HTMLElementProps {
   // is the element an opening tag
   open: boolean;
   // adjust size of the element text
-  textSize?: string;
+  className?: string;
 }
 
-const HTMLElement = ({ elementName, open, textSize }: HTMLElementProps) => {
+const HTMLElement = ({ elementName, open, className }: HTMLElementProps) => {
   return (
-    <div className={`${textSize ? `text-${textSize}` : ""}`}>
+    <div className={className}>
       {open ? (
         <span className="text-bracket">&lt;</span>
       ) : (

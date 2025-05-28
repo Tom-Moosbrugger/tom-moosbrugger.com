@@ -1,13 +1,13 @@
 interface ComponentElementProps {
   componentName: string;
-  textSize?: string;
+  className?: string;
 }
 
-const ComponentElement = ({ componentName, textSize }: ComponentElementProps) => {
+const ComponentElement = ({ componentName, className }: ComponentElementProps) => {
   return (
-    <div className={`${textSize ? `text-${textSize}` : ""}`}>
+    <div className={className}>
       <span className="text-bracket">&lt;</span>
-      {componentName}
+      {componentName + " "}
       <span className="text-bracket">&#47;&gt;</span>
     </div>
   );

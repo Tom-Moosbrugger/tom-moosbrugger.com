@@ -4,8 +4,8 @@ import HTMLElement from "@/components/Elements/HTMLElement";
 
 const Welcome = () => {
   return (
-    <article className="flex flex-col md:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg">
-      <section className="flex flex-col">
+    <article className="flex flex-col lg:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg max-w-[1200px]">
+      <section className="flex flex-1 flex-col justify-center">
         <ComponentElement
           className="text-keyword dark:text-component text-4xl mb-4"
           componentName="Welcome"
@@ -15,7 +15,7 @@ const Welcome = () => {
           <h1 className="pl-5 text-2xl py-1">
             Hi, my name is Tom Moosbrugger.
           </h1>
-          <HTMLElement elementName="h1" open={false} className="mb-4" />
+          <HTMLElement elementName="h1" open={false} className="mb-1" />
           <HTMLElement elementName="p" open={true} />
           <p className="pl-5 py-1">
             I&apos;m a full-stack engineer driven by the challenge of building
@@ -25,32 +25,23 @@ const Welcome = () => {
             frontend polish, I approach every project with precision and
             purpose.
           </p>
-          <HTMLElement elementName="p" open={false} className="mb-4" />
-          <HTMLElement elementName="p" open={true} />
-          <p className="pl-5 py-1">
-            Before transitioning into software, I spent a decade leading
-            impactful work in the nonprofit sector. That experience honed my
-            skills as a careful and detail-oriented planner, effective project
-            manager, and collaborative team player — all of which contribute to
-            my success as a software developer.
-          </p>
-          <HTMLElement elementName="p" open={false} className="mb-4" />
+          <HTMLElement elementName="p" open={false} className="mb-1" />
           <HTMLElement elementName="p" open={true} />
           <p className="pl-5 py-1">
             I&apos;m looking for a team where I can keep building great software
             — and keep growing. If that sounds like what you&apos;re building,
             let&apos;s chat.
           </p>
-          <HTMLElement elementName="p" open={false} className="mb-4" />
+          <HTMLElement elementName="p" open={false} className="mb-1" />
         </div>
       </section>
-      <section className="flex items-center justify-center">
+      <section className="flex flex-1 items-center justify-center lg:justify-end">
         <Image
           src="/Headshot.jpg"
           alt="Picture of the author"
-          width={250}
-          height={250}
-          className="rounded-lg object-cover min-w-[250px] min-h-[px] shadow-light dark:shadow-dark"
+          width={500}
+          height={500}
+          className="rounded-lg object-cover shadow-light dark:shadow-dark"
         />
       </section>
     </article>

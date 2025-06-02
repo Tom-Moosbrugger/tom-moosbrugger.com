@@ -3,7 +3,9 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-   <Welcome />
+   <div className="flex items-center justify-center">
+    <Welcome />
+   </div>
   );
 }
 

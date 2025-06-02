@@ -10,12 +10,12 @@ const NavLink = ({ linkText, hRef, onClick }: NavLinkProps) => {
   return (
     <Link
       href={hRef}
-      className="text-keyword hover:text-black  dark:text-component dark:hover:text-amber-200 font-medium"
+      className="text-blue hover:text-black  dark:text-green dark:hover:text-amber-200 font-medium"
       onClick={onClick}
     >
-      <span className="text-bracket">&lt;</span>
+      <span className="text-grey">&lt;</span>
       {linkText}
-      <span className="text-bracket"> &#47;&gt;</span>
+      <span className="text-grey"> &#47;&gt;</span>
     </Link>
   );
 };

@@ -16,11 +16,7 @@ export default Home;
 Home page needs the following sections:
 
 Welcome:
-  Hi, I'm Tom Moosbrugger
-  I'm a _______
 
-
-AboutMe
   Quick intro with introductory paragraph about me and photo.
   Make sure to have different layouts for screen sizes
   also include animation with typing

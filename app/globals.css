@@ -3,13 +3,15 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-component: #4EC9B0;
-  --color-keyword: #569CD6;
-  --color-property: #9CDCFE;
-  --color-string: #CE9178;
-  --color-bracket: #808080;
-  --color-function: #DCDCAA;
-  --color-number: #B5CEA8;
+  --color-green: #4EC9B0;
+  --color-blue: #569CD6;
+  --color-lightblue: #9CDCFE;
+  --color-orange: #CE9178;
+  --color-grey: #808080;
+  --color-yellow: #DCDCAA;
+  --color-lightgreen: #B5CEA8;
+  --color-purple: #C586C0;
+  --color-red: #F44747;
   --shadow-dark: -10px 10px rgb(78 201 176);
   --shadow-light: -10px 10px rgb(86 156 214);
 }

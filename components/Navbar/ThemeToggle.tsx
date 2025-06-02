@@ -57,7 +57,7 @@ const ThemeToggle = () => {
               <SunIcon className="size-5 fill-amber-300 stroke-amber-300" />
             )
           : !loading && (
-              <MoonIcon className="size-5  fill-blue-200 stroke-gray-500" />
+              <MoonIcon className="size-5 fill-blue-200 stroke-gray-500" />
             )}
       </button>
     </div>

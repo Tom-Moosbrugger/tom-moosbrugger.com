@@ -6,9 +6,9 @@ interface ComponentElementProps {
 const ComponentElement = ({ componentName, className }: ComponentElementProps) => {
   return (
     <div className={className}>
-      <span className="text-bracket">&lt;</span>
+      <span className="text-grey">&lt;</span>
       {componentName + " "}
-      <span className="text-bracket">&#47;&gt;</span>
+      <span className="text-grey">&#47;&gt;</span>
     </div>
   );
 };

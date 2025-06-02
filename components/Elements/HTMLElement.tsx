@@ -9,14 +9,14 @@ interface HTMLElementProps {
 
 const HTMLElement = ({ elementName, open, className }: HTMLElementProps) => {
   return (
-    <div className={`${className} text-keyword`}>
+    <div className={`${className} text-blue`}>
       {open ? (
-        <span className="text-bracket">&lt;</span>
+        <span className="text-grey">&lt;</span>
       ) : (
-        <span className="text-bracket">&lt;&#47;</span>
+        <span className="text-grey">&lt;&#47;</span>
       )}
       {elementName}
-      <span className="text-bracket">&gt;</span>
+      <span className="text-grey">&gt;</span>
     </div>
   );
 };

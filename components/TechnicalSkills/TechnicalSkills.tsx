@@ -21,27 +21,28 @@ import TypeScriptLogo from "@/public/skillIcons/typescript.svg";
 
 const TechnicalSkills = () => {
   const skillIcons = [
-    { id: "javascript", icon: JavaScriptLogo },
-    { id: "typescript", icon: TypeScriptLogo },
-    { id: "python", icon: PythonLogo },
-    { id: "html", icon: HTMLLogo },
-    { id: "css", icon: CSSLogo },
-    { id: "react", icon: ReactLogo },
-    { id: "redux", icon: ReduxLogo },
-    { id: "nextjs", icon: NextJSLogo },
-    { id: "tailwind", icon: TailwindLogo },
-    { id: "nodejs", icon: NodeJSLogo },
-    { id: "express", icon: ExpressLogo },
-    { id: "flask", icon: FlaskLogo },
-    { id: "sqlite", icon: SQLiteLogo },
-    { id: "postgresql", icon: PostgreSQLLogo },
-    { id: "sequelize", icon: SequelizeLogo },
-    { id: "sqlalchemy", icon: SQLAlchemyLogo },
-    { id: "git", icon: GitLogo },
-    { id: "docker", icon: DockerLogo },
+    { id: "JavaScript", icon: JavaScriptLogo },
+    { id: "TypeScript", icon: TypeScriptLogo },
+    { id: "Python", icon: PythonLogo },
+    { id: "HTML", icon: HTMLLogo },
+    { id: "CSS", icon: CSSLogo },
+    { id: "React", icon: ReactLogo },
+    { id: "Redux", icon: ReduxLogo },
+    { id: "Next.js", icon: NextJSLogo },
+    { id: "Tailwind", icon: TailwindLogo },
+    { id: "Node.js", icon: NodeJSLogo },
+    { id: "Express.js", icon: ExpressLogo },
+    { id: "Flask", icon: FlaskLogo },
+    { id: "SQLite", icon: SQLiteLogo },
+    { id: "PostgreSQL", icon: PostgreSQLLogo },
+    { id: "Sequelize", icon: SequelizeLogo },
+    { id: "SQLAlchemy", icon: SQLAlchemyLogo },
+    { id: "Git", icon: GitLogo },
+    { id: "Docker", icon: DockerLogo },
   ];
 
-  const iconClassName = "text-blue dark:text-green rounded-lg dark:bg-black cursor-pointer hover:scale-110 shadow-md shadow-grey"
+  const iconClassName =
+    "text-blue dark:text-green rounded-lg dark:bg-black cursor-pointer hover:scale-110 shadow-md shadow-grey dark:shadow-white";
 
   return (
     <article className="flex flex-col p-10 mx-10 my-10 border-1 rounded-lg sm:w-1xl md:w-3xl lg:w-5xl xl:w-7xl">
@@ -52,17 +53,25 @@ const TechnicalSkills = () => {
         />
       </header>
       <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center items-center">
-        {skillIcons.map(skill => {
-            const Icon = skill.icon;
+        {skillIcons.map((skill) => {
+          const Icon = skill.icon;
 
-            return (
-                <Icon
-                    key={skill.id} 
-                    height={75}
-                    width={75}
-                    className={iconClassName}
-                />
-            )
+          return (
+            <div
+              key={skill.id}
+              className="relative group flex flex-col items-center justify-center"
+            >
+              <Icon
+                key={skill.id}
+                height={75}
+                width={75}
+                className={iconClassName}
+              />
+              <span className="absolute -bottom-12 bg-white dark:bg-black border-1 opacity-0 group-hover:opacity-100 z-1 w-content p-2">
+                {skill.id}
+              </span>
+            </div>
+          );
         })}
       </section>
     </article>

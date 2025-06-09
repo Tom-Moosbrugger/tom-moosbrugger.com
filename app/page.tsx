@@ -1,9 +1,11 @@
 import Welcome from "@/components/Welcome/Welcome";
+import TechnicalSkills from "@/components/TechnicalSkills/TechnicalSkills";
 
 const Home = () => {
   return (
-   <div className="flex items-center justify-center">
+   <div className="flex flex-col items-center justify-center">
     <Welcome />
+    <TechnicalSkills />
    </div>
   );
 }

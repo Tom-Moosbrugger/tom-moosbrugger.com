@@ -11,12 +11,6 @@ const TechnicalSkills = () => {
         />
       </header>
       <section>
-        <Image 
-          src="/TechnicalSkills/javascript.svg"
-          height={24}
-          width={24}
-          alt="javascript logo"
-        />
       </section>
     </article>
   );

@@ -1,5 +1,5 @@
-import Welcome from "@/components/Welcome/Welcome";
-import TechnicalSkills from "@/components/TechnicalSkills/TechnicalSkills";
+import Welcome from "@/components/HomePage/Welcome/Welcome";
+import TechnicalSkills from "@/components/HomePage/TechnicalSkills/TechnicalSkills";
 
 const Home = () => {
   return (

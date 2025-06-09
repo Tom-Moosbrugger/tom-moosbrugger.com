@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ComponentElement from "@/components/Elements/ComponentElement";
-import HTMLElement from "@/components/Elements/HTMLElement";
 import HTMLElementWrapper from "@/components/Elements/HTMLElementWrapper";
 
 const Welcome = () => {

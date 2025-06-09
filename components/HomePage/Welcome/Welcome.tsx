@@ -11,40 +11,24 @@ const Welcome = () => {
           componentName="Welcome"
         />
         <div>
-          <HTMLElementWrapper
-            elementName="h1"
-            className="mb-1"
-            child={
-              <h1 className="pl-5 text-4xl py-1">
-                Hi, I&apos;m <span className="text-purple font-bold">Tom Moosbrugger</span>.
-              </h1>
-            }
-          />
-          <HTMLElementWrapper
-            elementName="p"
-            className="mb-1"
-            child={
-              <p className="pl-5 py-1">
-                I&apos;m a full-stack engineer driven by the challenge of
-                building high-quality web applications from the ground up. I
-                specialize in delivering performant, maintainable solutions that
-                are as intuitive for users as they are scalable for teams. From
-                backend systems to frontend polish, I approach every project
-                with <span className="text-red">precision</span> and <span className="text-red">purpose</span>.
-              </p>
-            }
-          />
-          <HTMLElementWrapper
-            elementName="p"
-            className="mb-1"
-            child={
-              <p className="pl-5 py-1">
-                I&apos;m looking for a team where I can keep building great
-                software — and keep growing. If that sounds like what
-                you&apos;re building, let&apos;s chat.
-              </p>
-            }
-          />
+          <h1 className="pl-5 text-4xl py-1 mb-4">
+            Hi, I&apos;m{" "}
+            <span className="text-purple font-bold">Tom Moosbrugger</span>.
+          </h1>
+          <p className="pl-5 text-xl py-1 mb-4">
+            I&apos;m a full-stack engineer driven by the challenge of building
+            high-quality web applications from the ground up. I specialize in
+            delivering performant, maintainable solutions that are as intuitive
+            for users as they are scalable for teams. From backend systems to
+            frontend polish, I approach every project with{" "}
+            <span className="text-red">precision</span> and{" "}
+            <span className="text-red">purpose</span>.
+          </p>
+          <p className="pl-5 text-xl py-1">
+            I&apos;m looking for a team where I can keep building great software
+            — and keep growing. If that sounds like what you&apos;re building,
+            let&apos;s chat.
+          </p>
         </div>
       </section>
       <section className="flex flex-1 items-center justify-center lg:justify-end">

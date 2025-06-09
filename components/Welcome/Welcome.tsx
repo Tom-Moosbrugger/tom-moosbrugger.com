@@ -4,7 +4,7 @@ import HTMLElementWrapper from "@/components/Elements/HTMLElementWrapper";
 
 const Welcome = () => {
   return (
-    <article className="flex flex-col lg:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg max-w-[1200px]">
+    <article className="flex flex-col lg:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg max-w-7xl">
       <section className="flex flex-1 flex-col justify-center">
         <ComponentElement
           className="text-blue dark:text-green text-4xl mb-4"

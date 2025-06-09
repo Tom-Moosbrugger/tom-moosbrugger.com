@@ -1,5 +1,4 @@
-import Welcome from "@/components/Welcome";
-import Image from "next/image";
+import Welcome from "@/components/Welcome/Welcome";
 
 const Home = () => {
   return (

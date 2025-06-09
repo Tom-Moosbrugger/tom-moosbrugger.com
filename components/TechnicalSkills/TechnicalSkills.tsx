@@ -1,5 +1,4 @@
 import ComponentElement from "@/components/Elements/ComponentElement";
-import AWSLogo from "@/public/skillIcons/aws.svg";
 import CSSLogo from "@/public/skillIcons/css3.svg";
 import DockerLogo from "@/public/skillIcons/docker.svg";
 import ExpressLogo from "@/public/skillIcons/express.svg";
@@ -42,7 +41,7 @@ const TechnicalSkills = () => {
   ];
 
   const iconClassName =
-    "text-blue dark:text-green rounded-lg dark:bg-black cursor-pointer hover:scale-110 shadow-md shadow-grey dark:shadow-white";
+    "text-blue dark:text-green rounded-lg dark:bg-black cursor-pointer hover:scale-110 shadow-md shadow-grey dark:shadow-sm dark:shadow-white";
 
   return (
     <article className="flex flex-col p-10 mx-10 my-10 border-1 rounded-lg sm:w-1xl md:w-3xl lg:w-5xl xl:w-7xl">

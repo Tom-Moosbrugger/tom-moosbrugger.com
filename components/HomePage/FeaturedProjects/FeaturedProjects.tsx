@@ -70,7 +70,8 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
               index === i
                 ? "dark:text-green dark:fill-green fill-blue text-blue"
                 : "fill-gray-400 text-gray-400"
-            }`}
+            } cursor-pointer`}
+            onClick={() => setIndex(i)}
           />
         ))}
         <ChevronRightIcon

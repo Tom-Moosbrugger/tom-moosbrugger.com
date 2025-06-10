@@ -10,7 +10,6 @@ const FeaturedProjectsWrapper = async () => {
         if (response.ok) {
             const data = await response.json();
             projects = data.projects;
-            console.log(projects)
         } else {
             console.error("HTTP Error!");
         }

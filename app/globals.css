@@ -15,4 +15,5 @@
   --color-red: #F44747;
   --shadow-dark: -10px 10px rgb(78 201 176);
   --shadow-light: -10px 10px rgb(86 156 214);
+  --text-shadow-custom: 1px 1px 6px #fff, 1px 1px 6px #ccc;
 }

@@ -3,19 +3,22 @@ import ComponentElement from "@/components/Elements/ComponentElement";
 import HTMLElementWrapper from "@/components/Elements/HTMLElementWrapper";
 
 const Welcome = () => {
+
+  const pBaseClass = "pl-5 text-lg sm:text-xl py-1"
+
   return (
     <article className="flex flex-col lg:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg max-w-7xl">
       <section className="flex flex-1 flex-col">
         <ComponentElement
-          className="text-blue dark:text-green text-4xl mb-4"
+          className="text-blue dark:text-green text-xl sm:text-4xl mb-4"
           componentName="Welcome"
         />
         <div>
-          <h1 className="pl-5 text-4xl py-1 mb-4">
+          <h1 className="pl-5 text-xl sm:text-4xl py-1 mb-4">
             Hi, I&apos;m{" "}
-            <span className="text-purple font-bold">Tom Moosbrugger</span>.
+            <span className="text-gold dark:text-white text-shadow-custom font-bold">Tom Moosbrugger</span>.
           </h1>
-          <p className="pl-5 text-xl py-1 mb-4">
+          <p className={`${pBaseClass} mb-4`}>
             I&apos;m a full-stack engineer driven by the challenge of building
             high-quality web applications from the ground up. I specialize in
             delivering performant, maintainable solutions that are as intuitive
@@ -24,7 +27,7 @@ const Welcome = () => {
             <span className="text-red">precision</span> and{" "}
             <span className="text-red">purpose</span>.
           </p>
-          <p className="pl-5 text-xl py-1">
+          <p className={`${pBaseClass}`}>
             I&apos;m looking for a team where I can keep building great software
             — and keep growing. If that sounds like what you&apos;re building,
             let&apos;s chat.

@@ -47,7 +47,7 @@ const TechnicalSkills = () => {
     <article className="flex flex-col p-10 mx-10 my-10 border-1 rounded-lg sm:w-1xl md:w-3xl lg:w-5xl xl:w-7xl">
       <header className="mb-14">
         <ComponentElement
-          className="text-blue dark:text-green text-2xl sm:text-4xl"
+          className="text-blue dark:text-green text-xl sm:text-4xl"
           componentName="TechnicalSkills"
         />
       </header>

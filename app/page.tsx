@@ -1,7 +1,7 @@
 import Welcome from "@/components/HomePage/Welcome/Welcome";
 import TechnicalSkills from "@/components/HomePage/TechnicalSkills/TechnicalSkills";
-import FeaturedProjects from "@/components/HomePage/FeaturedProjects/FeaturedProjects";
 import FeaturedProjectsWrapper from "@/components/HomePage/FeaturedProjects/FeaturedProjectsWrapper";
+import ContactBanner from "@/components/HomePage/ContactBanner/ContactBanner";
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
     <Welcome />
     <TechnicalSkills />
     <FeaturedProjectsWrapper />
+    <ContactBanner />
    </div>
   );
 }

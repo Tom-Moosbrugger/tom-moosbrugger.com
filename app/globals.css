@@ -2,17 +2,32 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@keyframes slide-right {
+  0% {
+    transform: translate(-150vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@layer utilities {
+  .animate-slide-right {
+    animation: slide-right 3s ease-out forwards;
+  }
+}
+
 @theme {
-  --color-green: #4EC9B0;
-  --color-blue: #569CD6;
-  --color-lightblue: #9CDCFE;
-  --color-orange: #CE9178;
+  --color-green: #4ec9b0;
+  --color-blue: #569cd6;
+  --color-lightblue: #9cdcfe;
+  --color-orange: #ce9178;
   --color-grey: #808080;
-  --color-yellow: #DCDCAA;
-  --color-gold: #CD9731;
-  --color-lightgreen: #B5CEA8;
-  --color-purple: #C586C0;
-  --color-red: #F44747;
+  --color-yellow: #dcdcaa;
+  --color-gold: #cd9731;
+  --color-lightgreen: #b5cea8;
+  --color-purple: #c586c0;
+  --color-red: #f44747;
   --shadow-dark: -10px 10px rgb(78 201 176);
   --shadow-light: -10px 10px rgb(86 156 214);
   --text-shadow-dark: 1px 1px 4px #fff, 1px 1px 4px #ccc;

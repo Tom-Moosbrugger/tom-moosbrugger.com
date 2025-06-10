@@ -16,7 +16,7 @@ const Welcome = () => {
         <div>
           <h1 className="pl-5 text-xl sm:text-4xl py-1 mb-4">
             Hi, I&apos;m{" "}
-            <span className="text-gold dark:text-white text-shadow-custom font-bold">Tom Moosbrugger</span>.
+            <span className="text-black text-shadow-light dark:text-white dark:text-shadow-dark font-bold">Tom Moosbrugger</span>.
           </h1>
           <p className={`${pBaseClass} mb-4`}>
             I&apos;m a full-stack engineer driven by the challenge of building

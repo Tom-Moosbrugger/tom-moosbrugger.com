@@ -1,13 +1,14 @@
 import Welcome from "@/components/HomePage/Welcome/Welcome";
 import TechnicalSkills from "@/components/HomePage/TechnicalSkills/TechnicalSkills";
 import FeaturedProjects from "@/components/HomePage/FeaturedProjects/FeaturedProjects";
+import FeaturedProjectsWrapper from "@/components/HomePage/FeaturedProjects/FeaturedProjectsWrapper";
 
 const Home = () => {
   return (
    <div className="flex flex-col items-center justify-center">
     <Welcome />
     <TechnicalSkills />
-    <FeaturedProjects />
+    <FeaturedProjectsWrapper />
    </div>
   );
 }

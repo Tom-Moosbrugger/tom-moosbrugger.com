@@ -1,0 +1,42 @@
+[
+    {
+        "name": "NextHire",
+        "liveURL": "nexthire-m0no.onrender.com",
+        "githubURL": "https://github.com/Tom-Moosbrugger/NextHire",
+        "description": "NextHire is an application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application, as well as a convenient interface for tracking multiple applications at the same time.",
+        "img1": "/projects/NextHireLogin.png",
+        "img2": "/projects/NextHireHome.png",
+        "img3": "/projects/NextHireCommonQs.png",
+        "technologies": ["JavaScript", "Python", "React", "Redux", "dnd kit", "Flask", "PostgreSQL", "SQLite", "SQLAlchemy", "Alembic", "AWS S3"]
+    },
+    {
+        "name": "Portfolio Website",
+        "liveURL": "tom-moosbrugger.com",
+        "githubURL": "https://github.com/Tom-Moosbrugger/tom-moosbrugger.com",
+        "description": "Personal website highlighting my skill with responsive, user-friendly design.",
+        "img1": "/projects/PortfolioHome.png",
+        "img2": "/projects/NextHireHome.png",
+        "img3": "/projects/NextHireCommonQs.png",
+        "technologies": ["TypeScript", "Next.js", "Tailwind CSS", "Nodemailer", "React Hook Form"]
+    },
+    {
+        "name": "BnB-Connect",
+        "liveURL": "https://bnb-connect.onrender.com/",
+        "githubURL": "https://github.com/Tom-Moosbrugger/BnB-Connect",
+        "description": "A full-stack web application that lets users create and review fictional vacation homes.",
+        "img1": "/projects/BnBConnectHome.png",
+        "img2": "/projects/BnBConnectCreateSpot.png",
+        "img3": "/projects/BnBConnectSpot.png",
+        "technologies": ["JavaScript", "React", "Redux", "Express.js", "PostgreSQL", "SQLite", "Sequelize"]
+    },
+    {
+        "name": "Museic",
+        "liveURL": "https://mod6-project.onrender.com/",
+        "githubURL": "https://github.com/miaohua897/Mod6_project",
+        "description": "Made in collaboration with three other developers, Museic is a full-stack web application that allows users to upload their own songs, put their songs into albums, & create playlists.",
+        "img1": "/projects/MuseicHome.png",
+        "img2": "/projects/MusicCreateAlbum.png",
+        "img3": "/projects/MuseicAlbum.png",
+        "technologies": ["JavaScript", "Python", "React", "Redux", "Flask", "PostgreSQL", "SQLite", "SQLAlchemy", "Alembic", "AWS S3"]
+    }
+]

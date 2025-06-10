@@ -35,8 +35,8 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   };
 
   return (
-    <article className="flex flex-col px-15 py-10 mx-10 my-10 border-1 rounded-lg max-w-7xl">
-      <header className="mb-14">
+    <article className="flex flex-col px-15 py-10 m-10 border-1 rounded-lg max-w-7xl">
+      <header className="mb-8 sm:mb-14">
         <ComponentElement
           className="text-blue dark:text-green text-xl sm:text-4xl"
           componentName="FeaturedProjects"

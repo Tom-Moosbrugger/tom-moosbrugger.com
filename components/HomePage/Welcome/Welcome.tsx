@@ -7,10 +7,10 @@ const Welcome = () => {
   const pBaseClass = "pl-5 text-lg sm:text-xl py-1"
 
   return (
-    <article className="flex flex-col lg:flex-row gap-6 p-10 mx-10 my-10 border-1 rounded-lg max-w-7xl">
+    <article className="flex flex-col lg:flex-row gap-6 p-10 m-10 border-1 rounded-lg max-w-7xl">
       <section className="flex flex-1 flex-col">
         <ComponentElement
-          className="text-blue dark:text-green text-xl sm:text-4xl mb-4"
+          className="text-blue dark:text-green text-xl sm:text-4xl mb-6 sm:mb-14"
           componentName="Welcome"
         />
         <div>

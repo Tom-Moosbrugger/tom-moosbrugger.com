@@ -4,7 +4,6 @@ import ComponentElement from "@/components/Elements/ComponentElement";
 import { ProjectData } from "@/lib/types";
 import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
 import Circle from "@/public/other/circle.svg";
 
 interface FeaturedProjectsProps {

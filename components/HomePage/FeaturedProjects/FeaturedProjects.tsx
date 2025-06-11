@@ -41,7 +41,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           componentName="FeaturedProjects"
         />
       </header>
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center md:px-20">
         <div className="w-full max-w-5xl aspect-video rounded-t-xl border-1 border-black dark:border-white overflow-hidden">
           <img
             src={projects[index].img1}
@@ -49,7 +49,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
             className="w-full h-full object-fit"
           />
         </div>
-        <div className="dark:bg-green bg-blue dark:text-black text-center font-extrabold w-full text-xl sm:text-3xl border-x-1 border-b-1 border-black dark:border-white py-5">
+        <div className="dark:bg-green bg-blue dark:text-black dark:text-shadow-light text-center font-extrabold w-full text-xl sm:text-3xl border-x-1 border-b-1 border-black dark:border-white py-5">
           {projects[index].name}
         </div>
       </section>

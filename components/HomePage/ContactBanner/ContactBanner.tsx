@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
 
 const ContactBanner = () => {
   const bannerRef = useRef<HTMLElement | null>(null);
@@ -8,13 +9,16 @@ const ContactBanner = () => {
   useEffect(() => {
     // create new intersection observer that watches for an element entering the viewport
     // once the element enters the viewport, add my custom animation utility class to its class
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-slide-right")
-        }
-      });
-    }, { threshold: 0 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-slide-right");
+          }
+        });
+      },
+      { threshold: 0 }
+    );
 
     const bannerNode = bannerRef.current;
 
@@ -28,14 +32,17 @@ const ContactBanner = () => {
   return (
     <section
       ref={bannerRef}
-      className="flex flex-col gap-6 items-center justify-center w-full bg-blue dark:bg-green dark:text-black border-y-2 dark:border-white p-10 m-10"
+      className="flex flex-col gap-6 items-center justify-center w-full bg-blue dark:bg-green dark:text-black border-y-2 dark:border-white p-7 mt-10 mb-20"
     >
       <p className="text-xl sm:text-4xl font-extrabold">
         What are you waiting for?
       </p>
-      <button className="text-xl sm:text-2xl border p-4 cursor-pointer hover:bg-white">
+      <Link
+        href="/contact"
+        className="text-xl sm:text-2xl border-2 p-4 cursor-pointer dark:bg-white dark:hover:bg-black dark:hover:text-white animate-slight-bounce hover:animate-none"
+      >
         Contact Me
-      </button>
+      </Link>
     </section>
   );
 };

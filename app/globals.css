@@ -58,4 +58,8 @@
   --color-red: #f44747;
   --text-shadow-dark: 1px 1px 4px #fff, 1px 1px 4px #ccc;
   --text-shadow-light: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-green-left: -5px 5px 5px #4ec9b0;
+  --shadow-green-right: 5px 5px 5px #4ec9b0;
+  --shadow-blue-left: -5px 5px 5px #569cd6;
+  --shadow-blue-right: 5px 5px 5px #569cd6;
 }

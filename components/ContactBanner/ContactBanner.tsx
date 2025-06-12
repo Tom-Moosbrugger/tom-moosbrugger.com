@@ -3,7 +3,11 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 
-const ContactBanner = () => {
+interface ContactBannerProps {
+  threshold: number;
+}
+
+const ContactBanner = ({ threshold }: ContactBannerProps) => {
   const bannerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -14,10 +18,11 @@ const ContactBanner = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-slide-right");
+            entry.target.classList.add("opacity-100");
           }
         });
       },
-      { threshold: 0 }
+      { threshold: threshold }
     );
 
     const bannerNode = bannerRef.current;
@@ -32,7 +37,7 @@ const ContactBanner = () => {
   return (
     <section
       ref={bannerRef}
-      className="flex flex-col gap-6 items-center justify-center w-full bg-blue dark:bg-green dark:text-black border-y-2 dark:border-white p-7 mt-10 mb-20"
+      className="flex flex-col gap-6 items-center justify-center w-full bg-blue dark:bg-green dark:text-black border-y-2 dark:border-white p-7 mt-10 mb-20 opacity-0"
     >
       <p className="text-xl sm:text-4xl font-bold text-shadow-light animate-slight-bounce">
         What are you waiting for?

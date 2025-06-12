@@ -1,7 +1,7 @@
 import Welcome from "@/components/HomePage/Welcome/Welcome";
 import TechnicalSkills from "@/components/HomePage/TechnicalSkills/TechnicalSkills";
 import FeaturedProjectsWrapper from "@/components/HomePage/FeaturedProjects/FeaturedProjectsWrapper";
-import ContactBanner from "@/components/HomePage/ContactBanner/ContactBanner";
+import ContactBanner from "@/components/ContactBanner/ContactBanner";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
     <Welcome />
     <TechnicalSkills />
     <FeaturedProjectsWrapper />
-    <ContactBanner />
+    <ContactBanner threshold={0}/>
    </main>
   );
 }

@@ -1,6 +1,7 @@
 import { ProjectData } from "@/lib/types";
 import Project from "@/components/ProjectsPage/Project";
 import ComponentElement from "@/components/Elements/ComponentElement";
+import ContactBanner from "@/components/ContactBanner/ContactBanner";
 
 const Projects = async () => {
   let projects: ProjectData[] = [];
@@ -35,6 +36,7 @@ const Projects = async () => {
         <Project key={index} project={project} index={index} />
       ))}
       {/* <Template /> */}
+      <ContactBanner threshold={.5}/>
     </main>
   );
 };

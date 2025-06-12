@@ -40,7 +40,7 @@ const Project = ({ project, index }: ProjectProps) => {
 
   return (
     <article ref={projectRef} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? "justify-start" : "justify-end"} px-10 mb-10 opacity-0`}>
-      <section className={`${index % 2 === 0 ? "" : "lg:order-1"} p-10 flex flex-col gap-6 max-w-xl border dark:bg-black bg-white`}>
+      <section className={`${index % 2 === 0 ? "shadow-blue-left dark:shadow-green-left" : "shadow-blue-right dark:shadow-green-right lg:order-1"} p-10 flex flex-col gap-6 max-w-xl border dark:bg-black bg-white`}>
         <h1 className="text-4xl font-extrabold dark:text-shadow-dark text-shadow-light">
           {project.name}
         </h1>
@@ -60,7 +60,7 @@ const Project = ({ project, index }: ProjectProps) => {
           <ProjectLink url={project.githubURL} linkText="GitHub" />
         </div>
       </section>
-      <section className={`flex-shrink-0 border border-white z-1 hidden sm:block ${index % 2 === 0 ? "lg:-ml-5" : "lg:-mr-5"}`}>
+      <section className={`flex-shrink-0 border border-white z-1 hidden sm:block shadow-md shadow-gray-400 ${index % 2 === 0 ? "lg:-ml-5" : "lg:-mr-5"}`}>
         <Image
           src={project.gif}
           alt={`${project.name} screenshot`}

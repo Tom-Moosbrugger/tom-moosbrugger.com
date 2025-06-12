@@ -39,7 +39,9 @@ export default function RootLayout({
       <body
         className={`${ibm.className} antialiased bg-white text-black dark:text-white dark:bg-black`}
       >
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
         {children}
       </body>
     </html>

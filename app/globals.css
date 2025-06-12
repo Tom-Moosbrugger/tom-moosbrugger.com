@@ -11,6 +11,15 @@
   }
 }
 
+@keyframes slide-left {
+  0% {
+    transform: translate(100vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
 @keyframes slight-bounce {
   0%, 100% {
     transform: translateY(-10%);
@@ -25,6 +34,9 @@
 @layer utilities {
   .animate-slide-right {
     animation: slide-right 1.5s linear forwards;
+  }
+  .animate-slide-left {
+    animation: slide-left 1.5s linear forwards;
   }
   .animate-slight-bounce {
     animation: slight-bounce 1s infinite

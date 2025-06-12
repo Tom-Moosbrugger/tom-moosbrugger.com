@@ -26,7 +26,7 @@ const Project = ({ project, index }: ProjectProps) => {
           }
         });
       },
-      { threshold: 1 }
+      { threshold: .5 }
     );
 
     const projectNode = projectRef.current;
@@ -39,7 +39,7 @@ const Project = ({ project, index }: ProjectProps) => {
   }, []);
 
   return (
-    <article ref={projectRef} className="flex flex-col lg:flex-row items-center justify-center px-5 mb-10 opacity-0">
+    <article ref={projectRef} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? "justify-start" : "justify-end"} px-10 mb-10 opacity-0`}>
       <section className={`${index % 2 === 0 ? "" : "lg:order-1"} p-10 flex flex-col gap-6 max-w-xl border dark:bg-black bg-white`}>
         <h1 className="text-4xl font-extrabold dark:text-shadow-dark text-shadow-light">
           {project.name}

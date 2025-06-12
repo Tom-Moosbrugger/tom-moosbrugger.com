@@ -27,7 +27,7 @@ const Projects = async () => {
     <main>
       <header className="p-10 text-center">
         <ComponentElement
-          componentName="Projects"
+          componentName="RecentProjects"
           className="text-blue dark:text-green text-xl sm:text-4xl"
         />
       </header>

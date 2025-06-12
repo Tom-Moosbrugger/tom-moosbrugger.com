@@ -41,8 +41,8 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           componentName="FeaturedProjects"
         />
       </header>
-      <section className="flex flex-col justify-center items-center md:px-20">
-        <div className="w-full max-w-5xl aspect-video rounded-t-xl border-1 border-black dark:border-white overflow-hidden">
+      <section className="flex flex-col justify-center items-center sm:px-20">
+        <div className="w-full max-w-3xl aspect-video rounded-t-xl border-1 border-black dark:border-white overflow-hidden">
           <img
             src={projects[index].img1}
             alt={`${projects[index].name} screenshot`}

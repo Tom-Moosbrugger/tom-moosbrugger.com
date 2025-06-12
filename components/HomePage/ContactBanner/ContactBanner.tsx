@@ -34,12 +34,12 @@ const ContactBanner = () => {
       ref={bannerRef}
       className="flex flex-col gap-6 items-center justify-center w-full bg-blue dark:bg-green dark:text-black border-y-2 dark:border-white p-7 mt-10 mb-20"
     >
-      <p className="text-xl sm:text-4xl font-extrabold">
+      <p className="text-xl sm:text-4xl font-bold text-shadow-light animate-slight-bounce">
         What are you waiting for?
       </p>
       <Link
         href="/contact"
-        className="text-xl sm:text-2xl border-2 p-4 cursor-pointer dark:bg-white dark:hover:bg-black dark:hover:text-white animate-slight-bounce hover:animate-none"
+        className="text-xl sm:text-2xl border-2 py-2 px-4 rounded-full cursor-pointer shadow-md shadow-gray-600 hover:bg-white hover:text-blue dark:hover:text-green"
       >
         Contact Me
       </Link>

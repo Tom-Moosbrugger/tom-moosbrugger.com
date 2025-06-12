@@ -3,7 +3,7 @@
     "name": "NextHire",
     "liveURL": "nexthire-m0no.onrender.com",
     "githubURL": "https://github.com/Tom-Moosbrugger/NextHire",
-    "description": "NextHire is an application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application. It also provides users with a convenient interface for tracking multiple applications at the same time.",
+    "description": "NextHire is a full-stack application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application. It also provides users with a convenient interface for tracking multiple applications at the same time.",
     "img1": "/projects/NextHireHome.png",
     "gif": "/projects/NextHireGIF.gif",
     "technologies": [

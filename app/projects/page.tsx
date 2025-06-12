@@ -1,5 +1,6 @@
 import { ProjectData } from "@/lib/types";
 import Project from "@/components/ProjectsPage/Project";
+import ComponentElement from "@/components/Elements/ComponentElement";
 
 const Projects = async () => {
   let projects: ProjectData[] = [];
@@ -24,21 +25,18 @@ const Projects = async () => {
 
   return (
     <main>
+      <header className="p-10 text-center">
+        <ComponentElement
+          componentName="Projects"
+          className="text-blue dark:text-green text-xl sm:text-4xl"
+        />
+      </header>
       {projects.map((project, index) => (
         <Project key={index} project={project} index={index} />
       ))}
+      {/* <Template /> */}
     </main>
   );
 };
 
 export default Projects;
-
-/*
-
-I want a page that displays all of my projects. 
-Each project should have a title, description, list of technologies used, and set of images
-Each project should also have a link to the github repo and the live website
-Each project should also 'slide' into view in alternating order: first right, then left, etc.
-
-
-*/

@@ -1,43 +1,75 @@
 [
-    {
-        "name": "NextHire",
-        "liveURL": "nexthire-m0no.onrender.com",
-        "githubURL": "https://github.com/Tom-Moosbrugger/NextHire",
-        "description": "NextHire is an application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application. It also provides users with a convenient interface for tracking multiple applications at the same time.",
-        "img1": "/projects/NextHireLogin.png",
-        "img2": "/projects/NextHireHome.png",
-        "img3": "/projects/NextHireCommonQs.png",
-        "technologies": ["JavaScript", "Python", "React", "Redux", "dnd kit", "Flask", "PostgreSQL", "SQLite", "SQLAlchemy", "Alembic", "AWS S3"]
-    },
-    {
-        "name": "Portfolio Website",
-        "liveURL": "tom-moosbrugger.com",
-        "githubURL": "https://github.com/Tom-Moosbrugger/tom-moosbrugger.com",
-        "description": "My personal website highlights my expertise in responsive, user-friendly design. An excellent representation of my ability to create intuitive and accessible digital experiences.",
-        "img1": "/projects/PortfolioHome.png",
-        "img2": "/projects/NextHireHome.png",
-        "img3": "/projects/NextHireCommonQs.png",
-        "technologies": ["TypeScript", "Next.js", "Tailwind CSS", "Nodemailer", "React Hook Form"]
-    },
-    {
-        "name": "BnB-Connect",
-        "liveURL": "https://bnb-connect.onrender.com/",
-        "githubURL": "https://github.com/Tom-Moosbrugger/BnB-Connect",
-        "description": "BnB-Connect is a full-stack web application designed to simulate a vacation rental marketplace. Users can create listings for fictional vacation rentals, sharing unique details about each listing through descriptions and images. The platform also supports user feedback, allowing users to leave reviews on existing listings.",
-        "img1": "/projects/BnBConnectHome.png",
-        "img2": "/projects/BnBConnectCreateSpot.png",
-        "img3": "/projects/BnBConnectSpot.png",
-        "technologies": ["JavaScript", "React", "Redux", "Express.js", "PostgreSQL", "SQLite", "Sequelize"]
-    },
-    {
-        "name": "Museic",
-        "liveURL": "https://mod6-project.onrender.com/",
-        "githubURL": "https://github.com/miaohua897/Mod6_project",
-        "description": "Made in collaboration with three other developers, Museic is a full-stack music-streaming application. Users can upload their own songs, put their songs into albums, and create playlists. A dedicated global player also allows users to listen to music – their own or anyone else’s – anywhere on the platform.",
-        "img1": "/projects/MuseicHome.png",
-        "img2": "/projects/MusicCreateAlbum.png",
-        "img3": "/projects/MuseicAlbum.png",
-        "technologies": ["JavaScript", "Python", "React", "Redux", "Flask", "PostgreSQL", "SQLite", "SQLAlchemy", "Alembic", "AWS S3"]
-    }
+  {
+    "name": "NextHire",
+    "liveURL": "nexthire-m0no.onrender.com",
+    "githubURL": "https://github.com/Tom-Moosbrugger/NextHire",
+    "description": "NextHire is an application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application. It also provides users with a convenient interface for tracking multiple applications at the same time.",
+    "img1": "/projects/NextHireHome.png",
+    "gif": "/projects/NextHireGIF.gif",
+    "technologies": [
+      "JavaScript",
+      "Python",
+      "React",
+      "Redux",
+      "dnd kit",
+      "Flask",
+      "PostgreSQL",
+      "SQLite",
+      "SQLAlchemy",
+      "Alembic",
+      "AWS S3"
+    ]
+  },
+  {
+    "name": "Portfolio Website",
+    "liveURL": "tom-moosbrugger.com",
+    "githubURL": "https://github.com/Tom-Moosbrugger/tom-moosbrugger.com",
+    "description": "My personal website highlights my expertise in responsive, user-friendly design. An excellent representation of my ability to create intuitive and accessible digital experiences.",
+    "img1": "/projects/PortfolioHome.png",
+    "gif": "/projects/PortfolioHome.png",
+    "technologies": [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Nodemailer",
+      "React Hook Form"
+    ]
+  },
+  {
+    "name": "BnB-Connect",
+    "liveURL": "https://bnb-connect.onrender.com/",
+    "githubURL": "https://github.com/Tom-Moosbrugger/BnB-Connect",
+    "description": "BnB-Connect is a full-stack web application designed to simulate a vacation rental marketplace. Users can create listings for fictional vacation rentals, sharing unique details about each listing through descriptions and images. The platform also supports user feedback, allowing users to leave reviews on existing listings.",
+    "img1": "/projects/BnBConnectSpot.png",
+    "gif": "/projects/BnBConnectGIF.gif",
+    "technologies": [
+      "JavaScript",
+      "React",
+      "Redux",
+      "Express.js",
+      "PostgreSQL",
+      "SQLite",
+      "Sequelize"
+    ]
+  },
+  {
+    "name": "Museic",
+    "liveURL": "https://mod6-project.onrender.com/",
+    "githubURL": "https://github.com/miaohua897/Mod6_project",
+    "description": "Made in collaboration with three other developers, Museic is a full-stack music-streaming application. Users can upload their own songs, put their songs into albums, and create playlists. A dedicated global player also allows users to listen to music – their own or anyone else’s – anywhere on the platform.",
+    "img1": "/projects/MuseicHome.png",
+    "gif": "/projects/MuseicGIF.gif",
+    "technologies": [
+      "JavaScript",
+      "Python",
+      "React",
+      "Redux",
+      "Flask",
+      "PostgreSQL",
+      "SQLite",
+      "SQLAlchemy",
+      "Alembic",
+      "AWS S3"
+    ]
+  }
 ]
-

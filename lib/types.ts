@@ -4,7 +4,6 @@ export type ProjectData = {
     githubURL: string;
     description: string;
     img1: string;
-    img2: string;
-    img3: string;
+    gif: string;
     technologies: String[];
 }

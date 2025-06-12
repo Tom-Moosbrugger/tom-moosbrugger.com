@@ -62,7 +62,7 @@ const Project = ({ project, index }: ProjectProps) => {
       </section>
       <section className={`flex-shrink-0 border border-white z-1 hidden sm:block ${index % 2 === 0 ? "lg:-ml-5" : "lg:-mr-5"}`}>
         <Image
-          src={project.img1}
+          src={project.gif}
           alt={`${project.name} screenshot`}
           height={700}
           width={700}

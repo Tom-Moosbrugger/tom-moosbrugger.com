@@ -34,7 +34,7 @@ const MobileMenu = () => {
         onClick={() => setShowMenu(!showMenu)}
       />
       {showMenu && (
-        <div className="absolute bg-white dark:bg-black top-8 right-0 flex flex-col items-center border-1 p-2 gap-2 min-w-42 z-1">
+        <div className="absolute bg-white dark:bg-black top-8 right-0 flex flex-col items-center border p-2 gap-2 min-w-42 z-1">
           <div className="w-full border-b-1 text-center pb-2">
             <NavLink
               hRef="/projects"

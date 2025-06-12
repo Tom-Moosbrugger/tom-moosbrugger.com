@@ -29,12 +29,11 @@
   .animate-slight-bounce {
     animation: slight-bounce 1s infinite
   }
-  .bg-gradient-darkgreen {
-    background-image: var(--gradient-darkgreen);
-  }
 }
 
 @theme {
+  --breakpoint-sm: 650px;
+  --breakpoint-md: 772px;
   --color-green: #4ec9b0;
   --color-blue: #569cd6;
   --color-lightblue: #9cdcfe;
@@ -45,9 +44,6 @@
   --color-lightgreen: #b5cea8;
   --color-purple: #c586c0;
   --color-red: #f44747;
-  --gradient-darkgreen: linear-gradient(to right, #2e2e2e, #065f46);
-  --shadow-dark: -10px 10px rgb(78 201 176);
-  --shadow-light: -10px 10px rgb(86 156 214);
   --text-shadow-dark: 1px 1px 4px #fff, 1px 1px 4px #ccc;
   --text-shadow-light: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }

@@ -36,7 +36,7 @@ const Projects = async () => {
         <Project key={index} project={project} index={index} />
       ))}
       {/* <Template /> */}
-      <ContactBanner threshold={.5}/>
+      <ContactBanner threshold={1}/>
     </main>
   );
 };

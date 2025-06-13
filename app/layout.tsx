@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { terminal, jetBrainsMono, ibm } from "@/lib/fonts";
-import Navbar from "@/components/Navbar/Navbar";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { terminal, jetBrainsMono, ibm } from '@/lib/fonts';
+import Navbar from '@/components/Navbar/Navbar';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Tom Moosbrugger",
-  description: "Portfolio website for Tom Moosbrugger, full-stack developer",
+  title: 'Tom Moosbrugger',
+  description: 'Portfolio website for Tom Moosbrugger, full-stack developer',
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ibm.className} antialiased bg-white text-black dark:text-white dark:bg-black`}
+        className={`${ibm.className} bg-white text-black antialiased dark:bg-black dark:text-white`}
       >
         <header>
           <Navbar />

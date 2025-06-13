@@ -3,11 +3,14 @@ interface ComponentElementProps {
   className?: string;
 }
 
-const ComponentElement = ({ componentName, className }: ComponentElementProps) => {
+const ComponentElement = ({
+  componentName,
+  className,
+}: ComponentElementProps) => {
   return (
     <div className={className}>
       <span className="text-grey">&lt;</span>
-      {componentName + " "}
+      {componentName + ' '}
       <span className="text-grey">&#47;&gt;</span>
     </div>
   );

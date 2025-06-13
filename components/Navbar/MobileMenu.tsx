@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import NavLink from "@/components/Navbar/NavLink";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import { useState, useEffect, useRef } from 'react';
+import NavLink from '@/components/Navbar/NavLink';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 
 // dropdown menu component for mobile devices
 const MobileMenu = () => {
@@ -22,27 +22,23 @@ const MobileMenu = () => {
 
   // add event listener to listen for clicks outside the dropdown menu
   useEffect(() => {
-    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener('click', handleOutsideClick);
 
-    return () => document.removeEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
   }, []);
 
   return (
-    <div className="sm:hidden relative" ref={menuRef}>
+    <div className="relative sm:hidden" ref={menuRef}>
       <Bars3Icon
-        className="size-7 border-1 cursor-pointer"
+        className="size-7 cursor-pointer border-1"
         onClick={() => setShowMenu(!showMenu)}
       />
       {showMenu && (
-        <div className="absolute bg-white dark:bg-black top-8 right-0 flex flex-col items-center border p-2 gap-2 min-w-42 z-1">
-          <div className="w-full border-b-1 text-center pb-2">
-            <NavLink
-              hRef="/projects"
-              linkText="Projects"
-              onClick={closeMenu}
-            />
+        <div className="absolute top-8 right-0 z-1 flex min-w-42 flex-col items-center gap-2 border bg-white p-2 dark:bg-black">
+          <div className="w-full border-b-1 pb-2 text-center">
+            <NavLink hRef="/projects" linkText="Projects" onClick={closeMenu} />
           </div>
-          <div className="w-full border-b-1 text-center pb-2">
+          <div className="w-full border-b-1 pb-2 text-center">
             <NavLink
               hRef="/TomMoosbrugger_Resume.pdf"
               linkText="Resume"
@@ -50,11 +46,7 @@ const MobileMenu = () => {
             />
           </div>
           <div>
-            <NavLink
-              hRef="/contact"
-              linkText="Contact"
-              onClick={closeMenu}
-            />
+            <NavLink hRef="/contact" linkText="Contact" onClick={closeMenu} />
           </div>
         </div>
       )}

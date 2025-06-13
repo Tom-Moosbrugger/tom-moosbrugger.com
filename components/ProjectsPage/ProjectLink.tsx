@@ -7,7 +7,7 @@ const ProjectLink = ({ url, linkText }: ProjectLinkProps) => {
   return (
     <a
       href={url}
-      className="text-xl px-3 py-1 cursor-pointer border-l-2 border-b-2 border-blue dark:border-green hover:border-2 hover:text-blue dark:hover:text-green"
+      className="border-blue dark:border-green hover:text-blue dark:hover:text-green cursor-pointer border-b-2 border-l-2 px-3 py-1 text-xl hover:border-2"
       target="_blank"
       referrerPolicy="no-referrer"
     >

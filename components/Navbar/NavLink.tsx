@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 interface NavLinkProps {
   linkText: string;
@@ -10,7 +10,7 @@ const NavLink = ({ linkText, hRef, onClick }: NavLinkProps) => {
   return (
     <Link
       href={hRef}
-      className="text-blue hover:text-black  dark:text-green dark:hover:text-amber-200 font-medium"
+      className="text-blue dark:text-green font-medium hover:text-black dark:hover:text-amber-200"
       onClick={onClick}
     >
       <span className="text-grey">&lt;</span>

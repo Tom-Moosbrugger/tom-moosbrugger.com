@@ -62,6 +62,6 @@
   --shadow-green-right: 5px 5px 5px #4ec9b0;
   --shadow-blue-left: -5px 5px 5px #569cd6;
   --shadow-blue-right: 5px 5px 5px #569cd6;
-  --shadow-blue: -5px 5px #569cd6;
-  --shadow-green: -5px 5px #4ec9b0;
+  --shadow-blue: -10px 10px #569cd6;
+  --shadow-green: -10px 10px #4ec9b0;
 }

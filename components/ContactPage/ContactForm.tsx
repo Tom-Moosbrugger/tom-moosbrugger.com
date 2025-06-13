@@ -120,7 +120,7 @@ const ContactForm = () => {
             <textarea
               className={inputClass}
               placeholder="Type your message here..."
-              rows={10}
+              rows={8}
               {...register('message', {
                 required: { value: true, message: 'Message is required' },
                 minLength: {

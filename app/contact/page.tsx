@@ -7,7 +7,7 @@ const Contact = () => {
   const [tab, setTab] = useState('tab1');
 
   const baseHeaderClass =
-    'text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center pt-4 pb-2 text-xl font-bold md:text-3xl';
+    'text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center p-4 text-xl font-bold md:text-3xl';
 
   return (
     <main className="flex justify-center px-20 py-10">
@@ -38,11 +38,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-/*
-
-I want to have a simple contact form that sends an email upon form submission
-It should have the following fields: email, subject line, message
-possibly also a captcha to avoid spam.
-
-*/

@@ -41,7 +41,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           componentName="FeaturedProjects"
         />
       </header>
-      <section className="flex flex-col items-center justify-center sm:px-20">
+      <section className="flex flex-col items-center justify-center lg:mx-50">
         <div className="aspect-video w-full max-w-3xl overflow-hidden rounded-t-xl border-1 border-black dark:border-white">
           <img
             src={projects[index].img1}

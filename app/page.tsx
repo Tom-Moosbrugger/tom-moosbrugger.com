@@ -9,7 +9,7 @@ const Home = () => {
       <Welcome />
       <TechnicalSkills />
       <FeaturedProjectsWrapper />
-      <ContactBanner threshold={0} />
+      <ContactBanner threshold={.5} />
     </main>
   );
 };

@@ -48,10 +48,10 @@ const Project = ({ project, index }: ProjectProps) => {
       <section
         className={`${index % 2 === 0 ? 'shadow-blue-left dark:shadow-green-left' : 'shadow-blue-right dark:shadow-green-right lg:order-1'} flex max-w-xl flex-col gap-6 border bg-white p-10 dark:bg-black`}
       >
-        <h1 className="dark:text-shadow-dark text-shadow-light text-4xl font-extrabold">
+        <h1 className="dark:text-shadow-dark text-shadow-light text-xl font-extrabold sm:text-4xl">
           {project.name}
         </h1>
-        <p className="text-xl">{project.description}</p>
+        <p className="sm:text-xl">{project.description}</p>
         <ul className="flex flex-row flex-wrap">
           {project.technologies.map((technology, i) => (
             <li

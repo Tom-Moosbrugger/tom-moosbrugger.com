@@ -3,7 +3,7 @@ import ComponentElement from '@/components/Elements/ComponentElement';
 import HTMLElementWrapper from '@/components/Elements/HTMLElementWrapper';
 
 const Welcome = () => {
-  const pBaseClass = 'pl-5 text-lg sm:text-xl py-1';
+  const pBaseClass = 'sm:pl-5 text-lg sm:text-xl py-1';
 
   return (
     <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border-1 p-10 lg:flex-row">
@@ -13,7 +13,7 @@ const Welcome = () => {
           componentName="Welcome"
         />
         <div>
-          <h1 className="mb-4 py-1 pl-5 text-xl sm:text-4xl">
+          <h1 className="mb-4 py-1 text-xl sm:pl-5 sm:text-4xl">
             Hi, I&apos;m{' '}
             <span className="text-shadow-light dark:text-shadow-dark font-bold text-black dark:text-white">
               Tom Moosbrugger
@@ -42,7 +42,7 @@ const Welcome = () => {
           alt="Picture of the author"
           width={500}
           height={500}
-          className="shadow-light dark:shadow-dark rounded-lg object-cover"
+          className="shadow-blue dark:shadow-green rounded-lg object-cover"
         />
       </section>
     </article>

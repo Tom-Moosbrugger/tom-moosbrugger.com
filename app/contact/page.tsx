@@ -15,14 +15,14 @@ const Contact = () => {
         <header className="flex flex-row items-center">
           <h2
             onClick={() => setTab('tab1')}
-            className={`text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center rounded-tl-lg pt-4 pb-2 text-xl font-bold sm:text-3xl ${tab === 'tab1' ? '' : 'bg-lightblue border-r border-b opacity-30 dark:bg-gray-400'}`}
+            className={`text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center rounded-tl-lg pt-4 pb-2 text-xl font-bold md:text-3xl ${tab === 'tab1' ? '' : 'bg-lightblue border-r border-b opacity-30 dark:bg-gray-400'}`}
           >
             Contact Form
             <br />
           </h2>
           <h2
             onClick={() => setTab('tab2')}
-            className={`text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center rounded-tr-lg pt-4 pb-2 text-xl font-bold sm:text-3xl ${tab === 'tab2' ? '' : 'bg-lightblue border-b border-l opacity-30 dark:bg-gray-400'}`}
+            className={`text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center rounded-tr-lg pt-4 pb-2 text-xl font-bold md:text-3xl ${tab === 'tab2' ? '' : 'bg-lightblue border-b border-l opacity-30 dark:bg-gray-400'}`}
           >
             {' '}
             Contact Details

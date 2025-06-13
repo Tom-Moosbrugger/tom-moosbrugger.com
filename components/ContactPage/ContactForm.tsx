@@ -31,7 +31,7 @@ const ContactForm = () => {
 
   const labelClass = 'flex flex-col font-bold gap-1';
   const inputClass =
-    'border rounded-md dark:bg-black bg-white dark:text-white font-normal pl-2 py-2 outline-none focus:border-2 text-sm sm:text-xl';
+    'border rounded-md dark:bg-gray-800 bg-white dark:text-white font-normal pl-2 py-2 outline-none focus:border-2 text-sm sm:text-xl';
 
   console.log(isSubmitSuccessful);
 
@@ -56,6 +56,7 @@ const ContactForm = () => {
             <Link
               href="/contact"
               className="hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
+              onClick={() => reset}
             >
               Send Another Message
             </Link>
@@ -136,7 +137,7 @@ const ContactForm = () => {
           </label>
           <button
             type="submit"
-            className="hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
+            className="hover:text-blue dark:bg-green dark:text-black dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
           >
             Send Message
           </button>

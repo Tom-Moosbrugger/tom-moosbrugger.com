@@ -6,7 +6,7 @@ const FormError = ({ message }: FormErrorProps) => {
   return (
     <div className="h-4">
       {message && (
-        <p className="text-red font-normal text-lg">{message}</p>
+        <p className="text-red-800 font-extrabold text-lg">{message}</p>
       )}
     </div>
   );

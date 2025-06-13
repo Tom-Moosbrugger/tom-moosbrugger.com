@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <main className="flex justify-center px-20 py-10">
-      <article className="rounded-lg border w-full min-w-sm max-w-4xl bg-blue dark:bg-green text-black">
+      <article className="rounded-lg border w-full min-w-sm max-w-4xl bg-blue dark:bg-black">
         <header className="flex flex-row items-center">
           <h2
             onClick={() => setTab('tab1')}

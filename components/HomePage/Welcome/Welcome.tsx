@@ -7,7 +7,7 @@ const Welcome = () => {
 
   return (
     <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border-1 p-10 lg:flex-row">
-      <section className="flex flex-1 flex-col">
+      <section className="flex flex-1 flex-col order-2 lg:order-none">
         <ComponentElement
           className="text-blue dark:text-green mb-6 text-xl sm:text-4xl"
           componentName="Welcome"
@@ -36,7 +36,7 @@ const Welcome = () => {
           </p>
         </div>
       </section>
-      <section className="flex flex-1 items-center justify-center lg:justify-end">
+      <section className="flex flex-1 items-center justify-center mb-6 lg:mb-0 lg:justify-end">
         <Image
           src="/Headshot.jpg"
           alt="Picture of the author"

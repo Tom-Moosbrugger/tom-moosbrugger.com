@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { sendMessage } from '@/lib/utils';
 import FormError from './FormError';
-import Link from 'next/link';
 import SubmitSuccess from './SubmitSuccess';
+import Loading from '@/public/other/loading.svg';
 
 type FormInputs = {
   email: string;
@@ -19,7 +19,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
     reset,
   } = useForm<FormInputs>({
     defaultValues: {
@@ -142,9 +142,18 @@ const ContactForm = () => {
           </label>
           <button
             type="submit"
-            className="hover:text-blue dark:bg-green dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
+            disabled={isSubmitting ? true : false}
+            className={`${isSubmitting ? 'dark:hover:bg-green hover:bg-blue cursor-not-allowed' : 'cursor-pointer hover:bg-white'} hover:text-blue dark:bg-green dark:hover:text-green mt-4 flex items-center justify-center rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 dark:text-black dark:shadow-gray-400`}
           >
-            Send Message
+            {isSubmitting ? (
+              <Loading
+                height={24}
+                width={24}
+                className="animate-spin text-center text-white"
+              />
+            ) : (
+              'Send Message'
+            )}
           </button>
         </form>
       )}

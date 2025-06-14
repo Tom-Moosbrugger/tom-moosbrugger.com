@@ -37,7 +37,10 @@ const ContactForm = () => {
       return;
     } else {
       setSubmissionError(response.message);
+
       reset();
+
+      throw new Error();
     }
   };
 
@@ -49,7 +52,7 @@ const ContactForm = () => {
     <>
       {isSubmitSuccessful ? (
         <article className="flex flex-col gap-4 text-xl">
-          <h1 className="dark:text-shadow-dark text-shadow-light text-2xl font-bold">
+          <h1 className="text-shadow-light text-3xl font-bold">
             Your message was sent successfully!
           </h1>
           <p>
@@ -59,14 +62,14 @@ const ContactForm = () => {
           <div className="flex flex-row gap-6">
             <Link
               href="/"
-              className="hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
+              className="bg-blue dark:bg-green hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
             >
               Take Me Home
             </Link>
             <Link
               href="/contact"
-              className="hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
-              onClick={() => reset}
+              className="bg-blue dark:bg-green hover:text-blue dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
+              onClick={() => reset()}
             >
               Send Another Message
             </Link>
@@ -80,10 +83,12 @@ const ContactForm = () => {
           <header>
             {submissionError && (
               <>
-                <p className='text-red-800 dark:text-red font-extrabold text-lg pb-4'>
+                <p className="dark:text-red pb-4 text-lg font-extrabold text-red-800">
                   There was an error submitting your message. Please try again.
                 </p>
-                <p className='text-red-800 dark:text-red font-extrabold text-lg pb-4'>Error message: {submissionError}</p>
+                <p className="dark:text-red pb-4 text-lg font-extrabold text-red-800">
+                  Error message: "{submissionError}""
+                </p>
               </>
             )}
             <p className="mb-4 font-medium">

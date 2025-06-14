@@ -1,6 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { sendMessage } from '@/lib/utils';
 import FormError from './FormError';
 import Link from 'next/link';
 
@@ -11,6 +13,8 @@ type FormInputs = {
 };
 
 const ContactForm = () => {
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
@@ -24,16 +28,22 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
-    // reset();
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+    setSubmissionError(null);
+
+    const response = await sendMessage(data);
+
+    if (response.success) {
+      return;
+    } else {
+      setSubmissionError(response.message);
+      reset();
+    }
   };
 
   const labelClass = 'flex flex-col font-bold gap-1';
   const inputClass =
     'border rounded-md dark:bg-gray-800 bg-white dark:text-white font-normal pl-2 py-2 outline-none focus:border-2 text-sm sm:text-xl';
-
-  console.log(isSubmitSuccessful);
 
   return (
     <>
@@ -68,7 +78,18 @@ const ContactForm = () => {
           className="flex w-full flex-col gap-4 text-xl"
         >
           <header>
-            <p className='font-medium mb-4'>I&apos;m always eager to connect and discuss new opportunities. Please get in touch using the form below. </p>
+            {submissionError && (
+              <>
+                <p className='text-red-800 dark:text-red font-extrabold text-lg pb-4'>
+                  There was an error submitting your message. Please try again.
+                </p>
+                <p className='text-red-800 dark:text-red font-extrabold text-lg pb-4'>Error message: {submissionError}</p>
+              </>
+            )}
+            <p className="mb-4 font-medium">
+              I&apos;m always eager to connect and discuss new opportunities.
+              Please get in touch using the form below.
+            </p>
           </header>
           <label className={labelClass}>
             Email
@@ -137,7 +158,7 @@ const ContactForm = () => {
           </label>
           <button
             type="submit"
-            className="hover:text-blue dark:bg-green dark:text-black dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:shadow-gray-400"
+            className="hover:text-blue dark:bg-green dark:hover:text-green mt-4 cursor-pointer rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
           >
             Send Message
           </button>

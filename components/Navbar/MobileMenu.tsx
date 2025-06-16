@@ -39,11 +39,16 @@ const MobileMenu = () => {
             <NavLink hRef="/projects" linkText="Projects" onClick={closeMenu} />
           </div>
           <div className="w-full border-b-1 pb-2 text-center">
-            <NavLink
-              hRef="/TomMoosbrugger_Resume.pdf"
-              linkText="Resume"
-              onClick={closeMenu}
-            />
+            <a
+              href="/TomMoosbrugger_Resume.pdf"
+              className="text-blue dark:text-green font-medium hover:text-black dark:hover:text-amber-200"
+              referrerPolicy="no-referrer"
+              target="_blank"
+            >
+              <span className="text-grey">&lt;</span>
+              Resume
+              <span className="text-grey"> &#47;&gt;</span>
+            </a>
           </div>
           <div>
             <NavLink hRef="/contact" linkText="Contact" onClick={closeMenu} />

@@ -1,6 +1,7 @@
 'use client';
 
 import ContactForm from '@/components/ContactPage/ContactForm';
+import ContactDetails from '@/components/ContactPage/ContactDetails';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -30,7 +31,7 @@ const Contact = () => {
           </h2>
         </header>
         <div className="px-10 py-10">
-          {tab === 'tab1' ? <ContactForm /> : <div>Contact Details</div>}
+          {tab === 'tab1' ? <ContactForm /> : <ContactDetails />}
         </div>
       </article>
     </main>

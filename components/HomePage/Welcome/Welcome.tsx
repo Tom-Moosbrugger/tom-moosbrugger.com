@@ -22,7 +22,7 @@ const Welcome = () => {
           </h1>
           <p className={`${pBaseClass} mb-4`}>
             I&apos;m a full-stack engineer driven by the challenge of building
-            high-quality web applications from the ground up. I specialize in
+            high-quality applications from the ground up. I specialize in
             delivering performant, maintainable solutions that are as intuitive
             for users as they are scalable for teams. From backend systems to
             frontend polish, I approach every project with{' '}

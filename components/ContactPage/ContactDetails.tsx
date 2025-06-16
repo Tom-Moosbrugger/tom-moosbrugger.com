@@ -4,7 +4,7 @@ import Email from "@/public/other/email.svg";
 
 const ContactDetails = () => {
     return (
-        <article className="text-xl">
+        <article className="text-sm sm:text-xl">
             <header>
                 <p className="mb-6 font-medium">If contact forms aren&apos;t your thing, feel free to reach out to me on these other platforms:</p>
             </header>
@@ -19,7 +19,7 @@ const ContactDetails = () => {
                 </div>
                 <div className="flex flex-row items-center gap-2">
                     <LinkedIn height={60} width={60} className="dark:fill-white" />
-                    <p>: linkedin.com/in/tom-moosbrugger/</p>
+                    <p>: in/tom-moosbrugger/</p>
                 </div>
             </section>
         </article>

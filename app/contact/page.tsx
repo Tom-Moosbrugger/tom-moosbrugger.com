@@ -8,7 +8,7 @@ const Contact = () => {
   const [tab, setTab] = useState('tab1');
 
   const baseHeaderClass =
-    'text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center p-4 text-xl font-bold md:text-3xl';
+    'text-shadow-light box-content flex flex-1 cursor-pointer items-center justify-center p-4 text-base sm:text-xl font-bold md:text-3xl';
 
   return (
     <main className="flex justify-center px-20 py-10">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { terminal, jetBrainsMono, ibm } from '@/lib/fonts';
+import { ibm } from '@/lib/fonts';
 import Navbar from '@/components/Navbar/Navbar';
 import './globals.css';
 

@@ -2,6 +2,7 @@ import Welcome from '@/components/HomePage/Welcome/Welcome';
 import TechnicalSkills from '@/components/HomePage/TechnicalSkills/TechnicalSkills';
 import FeaturedProjectsWrapper from '@/components/HomePage/FeaturedProjects/FeaturedProjectsWrapper';
 import ContactBanner from '@/components/ContactBanner/ContactBanner';
+import AboutMe from '@/components/HomePage/AboutMe/AboutMe';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Welcome />
       <TechnicalSkills />
       <FeaturedProjectsWrapper />
+      <AboutMe />
       <ContactBanner threshold={.5} />
     </main>
   );

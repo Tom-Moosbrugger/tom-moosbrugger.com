@@ -6,7 +6,7 @@ const Welcome = () => {
   const pBaseClass = 'sm:pl-5 text-lg sm:text-xl py-1';
 
   return (
-    <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border-1 p-10 lg:flex-row">
+    <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border p-10 lg:flex-row">
       <section className="flex flex-1 flex-col order-2 lg:order-none">
         <ComponentElement
           className="text-blue dark:text-green mb-6 text-xl sm:text-4xl"

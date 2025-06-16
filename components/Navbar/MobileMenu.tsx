@@ -44,6 +44,7 @@ const MobileMenu = () => {
               className="text-blue dark:text-green font-medium hover:text-black dark:hover:text-amber-200"
               referrerPolicy="no-referrer"
               target="_blank"
+              onClick={closeMenu}
             >
               <span className="text-grey">&lt;</span>
               Resume

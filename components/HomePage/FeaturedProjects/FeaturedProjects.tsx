@@ -85,18 +85,3 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
 };
 
 export default FeaturedProjects;
-
-/* 
-
-The goal is to have a carousel-like horizontal container that can scroll through projects
-there should be arrows to either side of an image of a project
-clicking an arrow scrolls to the next project, changing the image
-
-so if we had an array of objects from the backend, we could:
-
-create a slice of state for index
-have two arrow icons that change the index state
-display an image and box for the image and name, respectively
-have three dots below indicating the position in the carousel. 
-
-*/

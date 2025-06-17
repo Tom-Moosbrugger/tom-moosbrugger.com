@@ -39,7 +39,7 @@ export default function RootLayout({
       <body
         className={`${ibm.className} bg-white text-black antialiased dark:bg-black dark:text-white`}
       >
-        <header>
+        <header className='mb-15'>
           <Navbar />
         </header>
         {children}

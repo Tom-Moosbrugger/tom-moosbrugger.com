@@ -41,7 +41,7 @@
     "githubURL": "https://github.com/Tom-Moosbrugger/BnB-Connect",
     "description": "BnB-Connect is a full-stack web application designed to simulate a vacation rental marketplace. Users can create listings for fictional vacation rentals, sharing unique details about each listing through descriptions and images. The platform also supports user feedback, allowing users to leave reviews on existing listings.",
     "img1": "/projects/BnBConnectSpot.png",
-    "gif": "/projects/BnBConnectGIF.gif",
+    "gif": "/projects/BNBConnectGIF.gif",
     "technologies": [
       "JavaScript",
       "React",

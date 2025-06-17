@@ -4,9 +4,11 @@ import { ProjectData } from '@/lib/types';
 const FeaturedProjectsWrapper = async () => {
   let projects: ProjectData[] = [];
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`,
+      `${baseUrl}/api/projects`,
     );
 
     if (response.ok) {

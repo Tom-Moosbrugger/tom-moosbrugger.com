@@ -6,9 +6,11 @@ import ContactBanner from '@/components/ContactBanner/ContactBanner';
 const Projects = async () => {
   let projects: ProjectData[] = [];
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`,
+      `${baseUrl}/api/projects`,
     );
 
     if (response.ok) {
@@ -18,7 +20,10 @@ const Projects = async () => {
       console.error('HTTP Error!');
     }
   } catch (e: unknown) {
-    console.error('Whoops, there was an error!', e instanceof Error ? e.message : e);
+    console.error(
+      'Whoops, there was an error!',
+      e instanceof Error ? e.message : e,
+    );
   }
 
   return (

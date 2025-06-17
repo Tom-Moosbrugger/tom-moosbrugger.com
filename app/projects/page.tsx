@@ -1,30 +1,49 @@
+'use client';
+
 import { ProjectData } from '@/lib/types';
+import { useState, useEffect } from 'react';
+import Loading from '@/app/loading';
 import Project from '@/components/ProjectsPage/Project';
 import ComponentElement from '@/components/Elements/ComponentElement';
 import ContactBanner from '@/components/ContactBanner/ContactBanner';
 
-const Projects = async () => {
-  let projects: ProjectData[] = [];
+const Projects = () => {
+  const [projects, setProjects] = useState<ProjectData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const response = await fetch(`/api/projects`);
 
-  try {
-    const response = await fetch(
-      `${baseUrl}/api/projects`,
-    );
+        if (response.ok) {
+          const data = await response.json();
+          setProjects(data.projects);
+        } else {
+          console.error('HTTP Error!');
+          setError(
+            'There was an error fetching the projects, please try again',
+          );
+        }
+      } catch (e: unknown) {
+        console.error(
+          'Whoops, there was an error!',
+          e instanceof Error ? e.message : e,
+        );
 
-    if (response.ok) {
-      const data = await response.json();
-      projects = data.projects;
-    } else {
-      console.error('HTTP Error!');
-    }
-  } catch (e: unknown) {
-    console.error(
-      'Whoops, there was an error!',
-      e instanceof Error ? e.message : e,
-    );
-  }
+        setError(
+          e instanceof Error
+            ? e.message
+            : 'There was an error fetching the projects, please try again',
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getProjects();
+  }, []);
 
   return (
     <main>
@@ -34,11 +53,20 @@ const Projects = async () => {
           className="text-blue dark:text-green text-xl sm:text-4xl"
         />
       </header>
-      {projects.map((project, index) => (
-        <Project key={index} project={project} index={index} />
-      ))}
-      {/* <Template /> */}
-      <ContactBanner threshold={1} />
+      {loading ? (
+        <Loading />
+      ) : error ? (
+        <div className="text-center text-xl font-semibold text-red-600 sm:text-4xl">
+          {error}
+        </div>
+      ) : (
+        <>
+          {projects.map((project, index) => (
+            <Project key={index} project={project} index={index} />
+          ))}
+          <ContactBanner threshold={1} />
+        </>
+      )}
     </main>
   );
 };

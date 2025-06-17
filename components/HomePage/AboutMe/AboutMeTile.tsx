@@ -24,8 +24,8 @@ const AboutMeTile = ({
           <p className='order-2 md:order-0'>{text}</p>
           <Image
             src={src}
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             alt={alt}
             className="rounded-lg border-2 border-black object-cover dark:border-white"
           />
@@ -34,8 +34,8 @@ const AboutMeTile = ({
         <>
           <Image
             src={src}
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             alt={alt}
             className="rounded-lg border-2 border-black object-cover dark:border-white"
           />

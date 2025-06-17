@@ -4,13 +4,13 @@ import AboutMeTile from './AboutMeTile';
 
 const AboutMe = () => {
   return (
-    <article className="m-10 max-w-7xl rounded-lg border py-10 px-15">
+    <article className="m-10 w-1xl lg:w-5xl xl:w-7xl rounded-lg border py-10 px-15">
       <header className="mb-8 flex flex-col gap-6">
         <ComponentElement
           componentName="AboutMe"
           className="text-blue dark:text-green text-xl sm:text-4xl"
         />
-        <h1 className="text-lg sm:text-xl">
+        <h1 className="text-lg sm:text-xl font-extrabold">
           When I'm not busy with my next project, you can find me...
         </h1>
       </header>

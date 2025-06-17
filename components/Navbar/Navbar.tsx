@@ -5,7 +5,7 @@ import ThemeToggle from '@/components/Navbar/ThemeToggle';
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-row items-center justify-between border-b-[.5px] py-3 pr-4 pl-4 md:text-xl fixed w-full dark:bg-black bg-white z-1000 top-0 left-0">
+    <nav className="fixed top-0 left-0 z-1000 flex w-full flex-row items-center justify-between border-b-[.5px] bg-white py-3 pr-4 pl-4 md:text-xl dark:bg-black">
       <NavLink hRef="/" linkText="TomMoosbrugger" />
       <div className="flex gap-2 sm:gap-6">
         {/* dropdown menu for mobile */}

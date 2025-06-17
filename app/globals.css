@@ -1,9 +1,67 @@
 @import "tailwindcss";
 
-/* :root {
+@custom-variant dark (&:where(.dark, .dark *));
 
-} */
+@keyframes slide-right {
+  0% {
+    transform: translate(-100vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 
-/* @theme {
+@keyframes slide-left {
+  0% {
+    transform: translate(100vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 
-} */
+@keyframes slight-bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .animate-slide-right {
+    animation: slide-right 1.5s linear forwards;
+  }
+  .animate-slide-left {
+    animation: slide-left 1.5s linear forwards;
+  }
+  .animate-slight-bounce {
+    animation: slight-bounce 1s infinite
+  }
+}
+
+@theme {
+  --breakpoint-sm: 650px;
+  --breakpoint-md: 772px;
+  --color-green: #4ec9b0;
+  --color-blue: #569cd6;
+  --color-lightblue: #9cdcfe;
+  --color-orange: #ce9178;
+  --color-grey: #808080;
+  --color-yellow: #dcdcaa;
+  --color-gold: #cd9731;
+  --color-lightgreen: #b5cea8;
+  --color-purple: #c586c0;
+  --color-red: #f44747;
+  --text-shadow-dark: 1px 1px 4px #fff, 1px 1px 4px #ccc;
+  --text-shadow-light: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-green-left: -5px 5px 5px #4ec9b0;
+  --shadow-green-right: 5px 5px 5px #4ec9b0;
+  --shadow-blue-left: -5px 5px 5px #569cd6;
+  --shadow-blue-right: 5px 5px 5px #569cd6;
+  --shadow-blue: -10px 10px #569cd6;
+  --shadow-green: -10px 10px #4ec9b0;
+}

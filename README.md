@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tom-moosbrugger.com
 
-## Getting Started
+Welcome to my Portfolio Site! tom-moosbrugger.com is a showcase of my expertise in responsive, user-friendly design.
 
-First, run the development server:
+Take a look around, dig through the code, and feel free to reach out with any comments or feedback!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC) ![React-Hook-Form](https://img.shields.io/badge/react--hook--form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white) 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Responsive Design:** Ensures optimal viewing experience across various devices (desktops, tablets, and mobile phones).
 
-## Learn More
+**Adjustable Theme:** Use the theme toggle to switch between light mode and dark mode. Your theme choice is stored, so it will persist until you change it or clear your cache. 
 
-To learn more about Next.js, take a look at the following resources:
+**Projects Showcase:** Highlights my key projects with descriptions, technologies used, and links to live demos or repositories.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Resume:** Provides a PDF copy of my most up-to-date resume for viewing and/or download.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Contact Form and Information:** Offers easy ways to get in touch with me.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Email**: [tamoosbrugger@gmail.com](mailto:tamoosbrugger@gmail.com)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**LinkedIn**: [linkedin.com/in/tom-moosbrugger/](https://www.linkedin.com/in/tom-moosbrugger/)
+
+**GitHub**: [github.com/Tom-Moosbrugger](https://github.com/Tom-Moosbrugger)

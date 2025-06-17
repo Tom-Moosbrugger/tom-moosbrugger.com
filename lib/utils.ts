@@ -1,4 +1,4 @@
-"use server"
+'use server';
 
 import nodemailer from 'nodemailer';
 
@@ -18,7 +18,11 @@ interface MailProps {
   message: string;
 }
 
-export const sendMessage = async ({ email, subjectLine, message }: MailProps) => {
+export const sendMessage = async ({
+  email,
+  subjectLine,
+  message,
+}: MailProps) => {
   try {
     await transporter.sendMail({
       from: '"Contact Form Message" <tamoosbrugger@gmail.com>',
@@ -33,11 +37,14 @@ export const sendMessage = async ({ email, subjectLine, message }: MailProps) =>
             `,
     });
 
-    return { success: true, message: "Email sent successfully!" };
+    return { success: true, message: 'Email sent successfully!' };
   } catch (error: unknown) {
-        console.error('Whoops, there was an error!', error instanceof Error ? error.message : error);
-
-
-    return { success: false, message: error instanceof Error ? error.message : error || "Failed to send message." };
+    if (error instanceof Error) {
+      console.error(error.message);
+      return { success: false, message: error.message };
+    } else {
+      console.error('Unexpected error', error);
+      return { success: false, message: 'Failed to send message.' };
+    }
   }
 };

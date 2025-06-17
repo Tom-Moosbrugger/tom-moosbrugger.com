@@ -9,7 +9,7 @@ const NotFound = () => {
         alt="animated image of a person crying"
         width={400}
         height={400}
-        className="object-fit rounded-full"
+        className="object-fit rounded-full border-2 border-black dark:border-none"
       />
       <h1>
         {' '}
@@ -18,7 +18,7 @@ const NotFound = () => {
       </h1>
       <Link
         href="/"
-        className="hover:text-blue dark:bg-green dark:hover:text-green w-1/2 min-w-sm flex cursor-pointer items-center justify-center rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
+        className="hover:text-blue dark:bg-green bg-blue dark:hover:text-green w-1/2 min-w-sm flex cursor-pointer items-center justify-center rounded-full border px-4 py-2 text-xl shadow-md shadow-gray-600 hover:bg-white dark:text-black dark:shadow-gray-400"
       >
         Take Me Home
       </Link>

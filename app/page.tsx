@@ -11,7 +11,7 @@ const Home = () => {
       <TechnicalSkills />
       <FeaturedProjectsWrapper />
       <AboutMe />
-      <ContactBanner threshold={.5} />
+      <ContactBanner threshold={0.5} />
     </main>
   );
 };

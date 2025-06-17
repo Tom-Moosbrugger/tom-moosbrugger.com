@@ -4,7 +4,7 @@ import AboutMeTile from './AboutMeTile';
 
 const AboutMe = () => {
   return (
-    <article className="m-10 max-w-7xl rounded-lg border py-10 px-20">
+    <article className="m-10 max-w-7xl rounded-lg border py-10 px-15">
       <header className="mb-8 flex flex-col gap-6">
         <ComponentElement
           componentName="AboutMe"

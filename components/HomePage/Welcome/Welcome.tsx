@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import ComponentElement from '@/components/Elements/ComponentElement';
-import HTMLElementWrapper from '@/components/Elements/HTMLElementWrapper';
 
 const Welcome = () => {
   const pBaseClass = 'sm:pl-5 text-lg sm:text-xl py-1';

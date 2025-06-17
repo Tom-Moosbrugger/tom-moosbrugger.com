@@ -17,11 +17,8 @@ const Projects = async () => {
     } else {
       console.error('HTTP Error!');
     }
-  } catch (e: any) {
-    console.error(
-      'Whoops, there was an error fetching the projects!',
-      e.message,
-    );
+  } catch (e: unknown) {
+    console.error('Whoops, there was an error!', e instanceof Error ? e.message : e);
   }
 
   return (

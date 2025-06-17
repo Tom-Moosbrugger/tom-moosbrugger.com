@@ -37,8 +37,8 @@ const Project = ({ project, index }: ProjectProps) => {
       observer.observe(projectNode);
     }
 
-    () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect();
+  }, [index]);
 
   return (
     <article

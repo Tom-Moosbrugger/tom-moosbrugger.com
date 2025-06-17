@@ -31,8 +31,8 @@ const ContactBanner = ({ threshold }: ContactBannerProps) => {
       observer.observe(bannerNode);
     }
 
-    () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect();
+  }, [threshold]);
 
   return (
     <section

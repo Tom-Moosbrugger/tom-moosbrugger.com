@@ -66,7 +66,7 @@ const ContactForm = () => {
                   There was an error submitting your message. Please try again.
                 </p>
                 <p className="dark:text-red pb-4 text-lg font-extrabold text-red-800">
-                  Error message: "{submissionError}""
+                  Error message: &quot;{submissionError}&quot;
                 </p>
               </>
             )}

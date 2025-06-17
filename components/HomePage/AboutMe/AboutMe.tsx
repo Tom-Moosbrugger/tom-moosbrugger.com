@@ -1,5 +1,4 @@
 import ComponentElement from '@/components/Elements/ComponentElement';
-import Image from 'next/image';
 import AboutMeTile from './AboutMeTile';
 
 const AboutMe = () => {
@@ -11,7 +10,7 @@ const AboutMe = () => {
           className="text-blue dark:text-green text-xl sm:text-4xl"
         />
         <h1 className="text-lg sm:text-xl font-extrabold">
-          When I'm not busy with my next project, you can find me...
+          When I&apos;m not busy with my next project, you can find me...
         </h1>
       </header>
       <section className='flex flex-col gap-10 text-lg sm:text-xl'>

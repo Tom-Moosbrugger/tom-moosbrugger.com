@@ -5,5 +5,5 @@ export type ProjectData = {
     description: string;
     img1: string;
     gif: string;
-    technologies: String[];
+    technologies: string[];
 }

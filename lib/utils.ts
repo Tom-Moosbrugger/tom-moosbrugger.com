@@ -34,9 +34,10 @@ export const sendMessage = async ({ email, subjectLine, message }: MailProps) =>
     });
 
     return { success: true, message: "Email sent successfully!" };
-  } catch (error: any) {
-    console.error(error.message);
+  } catch (error: unknown) {
+        console.error('Whoops, there was an error!', error instanceof Error ? error.message : error);
 
-    return { success: false, message: error.message || "Failed to send message." };
+
+    return { success: false, message: error instanceof Error ? error.message : error || "Failed to send message." };
   }
 };

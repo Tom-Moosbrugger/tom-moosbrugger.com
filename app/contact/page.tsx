@@ -12,7 +12,7 @@ const Contact = () => {
 
   return (
     <main className="flex justify-center px-20 py-10">
-      <article className="bg-blue w-full max-w-4xl min-w-sm rounded-lg border dark:bg-black">
+      <article className="bg-blue w-full max-w-4xl min-w-xs sm:min-w-sm rounded-lg border dark:bg-black">
         <header className="flex flex-row items-center">
           <h2
             onClick={() => setTab('tab1')}
@@ -26,7 +26,7 @@ const Contact = () => {
             className={`${baseHeaderClass} rounded-tr-lg ${tab === 'tab2' ? '' : 'bg-lightblue border-b border-l opacity-30 dark:bg-gray-400'}`}
           >
             {' '}
-            Contact Details
+            Contact Info
             <br />
           </h2>
         </header>

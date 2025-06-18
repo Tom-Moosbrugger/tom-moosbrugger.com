@@ -48,7 +48,7 @@ const ContactForm = () => {
 
   const labelClass = 'flex flex-col font-bold gap-1';
   const inputClass =
-    'border rounded-md dark:bg-gray-800 bg-white dark:text-white font-normal pl-2 py-2 outline-none focus:border-2';
+    'border rounded-md dark:bg-gray-800 bg-white dark:text-white font-normal pl-2 py-2 outline-none focus:border-2 text-sm sm:text-xl';
 
   return (
     <>
@@ -57,7 +57,7 @@ const ContactForm = () => {
       ) : (
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex w-full flex-col gap-4 text-md sm:text-xl"
+          className="flex w-full flex-col gap-4 text-base sm:text-xl"
         >
           <header>
             {submissionError && (
@@ -80,7 +80,7 @@ const ContactForm = () => {
             <input
               type="text"
               className={inputClass}
-              placeholder="Enter your email address..."
+              placeholder="Enter your email..."
               {...register('email', {
                 required: { value: true, message: 'Email is required' },
                 minLength: {

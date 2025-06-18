@@ -44,7 +44,7 @@ const TechnicalSkills = () => {
     'text-blue dark:text-green rounded-lg dark:bg-black cursor-pointer hover:scale-110 shadow-md shadow-grey dark:shadow-sm dark:shadow-white';
 
   return (
-    <article className="w-1xl m-10 flex flex-col rounded-lg border-1 p-10 md:w-3xl lg:w-5xl xl:w-7xl">
+    <article className="w-1xl m-10 flex flex-col rounded-lg border-1 px-6 sm:px-10 py-10 md:w-3xl lg:w-4xl xl:w-7xl">
       <header className="mb-8 sm:mb-14">
         <ComponentElement
           className="text-blue dark:text-green text-xl sm:text-4xl"

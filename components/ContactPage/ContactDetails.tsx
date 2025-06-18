@@ -6,7 +6,7 @@ const ContactDetails = () => {
   const iconClass = 'h-8 w-8 md:h-16 md:w-16 fill-black dark:fill-white';
 
   return (
-    <section className="text-sm sm:text-xl">
+    <section className="text-base sm:text-xl">
       <header>
         <p className="mb-6 font-medium">
           If contact forms aren&apos;t your thing, feel free to reach out to me

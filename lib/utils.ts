@@ -2,16 +2,6 @@
 
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.EMAIL_PASS,
-  },
-});
-
 interface MailProps {
   email: string;
   subjectLine: string;
@@ -23,6 +13,16 @@ export const sendMessage = async ({
   subjectLine,
   message,
 }: MailProps) => {
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
   try {
     await transporter.sendMail({
       from: '"Contact Form Message" <tamoosbrugger@gmail.com>',

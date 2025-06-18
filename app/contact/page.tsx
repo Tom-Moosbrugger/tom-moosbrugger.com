@@ -30,7 +30,7 @@ const Contact = () => {
             <br />
           </h2>
         </header>
-        <div className="px-10 py-8">
+        <div className="p-6 md:p-10">
           {tab === 'tab1' ? <ContactForm /> : <ContactDetails />}
         </div>
       </article>

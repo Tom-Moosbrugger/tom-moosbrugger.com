@@ -41,7 +41,12 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           componentName="FeaturedProjects"
         />
       </header>
-      <section className="flex flex-col items-center justify-center lg:mx-50">
+      <a 
+        className="flex flex-col items-center justify-center lg:mx-50"
+        href={projects[index].githubURL}
+        target='_blank'
+        referrerPolicy="no-referrer"
+      >
         <div className="aspect-video w-full max-w-3xl overflow-hidden rounded-t-xl border-1 border-black dark:border-white">
           <img
             src={projects[index].img1}
@@ -49,10 +54,10 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
             className="object-fit h-full w-full"
           />
         </div>
-        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x-1 border-b-1 border-black py-5 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
+        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x-1 border-b-1 border-black py-2 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
           {projects[index].name}
         </div>
-      </section>
+      </a>
       <section className="flex flex-row items-center justify-center pt-10">
         <ChevronLeftIcon
           height={40}

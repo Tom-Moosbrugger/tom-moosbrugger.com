@@ -3,17 +3,17 @@ import AboutMeTile from './AboutMeTile';
 
 const AboutMe = () => {
   return (
-    <article className="m-10 w-1xl md:w-3xl lg:w-4xl xl:w-7xl rounded-lg border py-10 px-8 sm:px-15">
+    <article className="w-1xl m-10 rounded-lg border px-8 py-10 sm:px-15 md:w-3xl lg:w-4xl xl:w-7xl">
       <header className="mb-8 flex flex-col gap-6">
         <ComponentElement
           componentName="AboutMe"
           className="text-blue dark:text-green text-xl sm:text-4xl"
         />
-        <h1 className="text-lg sm:text-xl font-extrabold">
+        <h1 className="text-lg font-extrabold sm:text-xl">
           When I&apos;m not busy with my next project, you can find me...
         </h1>
       </header>
-      <section className='flex flex-col gap-10 text-lg sm:text-xl'>
+      <section className="flex flex-col gap-10 text-lg sm:text-xl">
         <AboutMeTile
           src="/about/exploring.jpg"
           alt="Picture of the author on a hike"
@@ -35,7 +35,7 @@ const AboutMe = () => {
           textFirst={false}
           text="Hanging with my cute dog Molly"
         />
-        
+
         <AboutMeTile
           src="/about/traveling.jpg"
           alt="Picture of the author at the Eiffel Tower"

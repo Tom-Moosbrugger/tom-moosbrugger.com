@@ -1,7 +1,7 @@
 [
   {
     "name": "NextHire",
-    "liveURL": "nexthire-m0no.onrender.com",
+    "liveURL": "https://nexthire-m0no.onrender.com/",
     "githubURL": "https://github.com/Tom-Moosbrugger/NextHire",
     "description": "NextHire is a full-stack application that helps users manage and track job applications. The app gives users the ability to store important information, deadlines, and application-specific materials for each individual job application. It also provides users with a convenient interface for tracking multiple applications at the same time.",
     "img1": "/projects/NextHireHome.png",
@@ -22,7 +22,7 @@
   },
   {
     "name": "Portfolio Website",
-    "liveURL": "tom-moosbrugger.com",
+    "liveURL": "https://tom-moosbrugger.com/",
     "githubURL": "https://github.com/Tom-Moosbrugger/tom-moosbrugger.com",
     "description": "My personal website highlights my expertise in responsive, user-friendly design. An excellent representation of my ability to create intuitive and accessible digital experiences.",
     "img1": "/projects/PortfolioHome.png",

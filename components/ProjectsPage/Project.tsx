@@ -68,14 +68,15 @@ const Project = ({ project, index }: ProjectProps) => {
         </div>
       </section>
       <section
-        className={`z-1 hidden flex-shrink-0 border border-white shadow-md shadow-gray-400 sm:block ${index % 2 === 0 ? 'lg:-ml-5' : 'lg:-mr-5'}`}
+        className={`relative z-1 hidden flex-shrink-0 border border-white shadow-md shadow-gray-400 sm:block sm:aspect-[16/9] sm:w-full sm:max-w-2xl ${index % 2 === 0 ? 'lg:-ml-5' : 'lg:-mr-5'}`}
       >
         <Image
+          priority={index === 0}
           src={project.gif}
           alt={`${project.name} screenshot`}
-          height={700}
-          width={700}
-          layout="fixed"
+          fill
+          style={{ objectFit: 'fill' }}
+          unoptimized
         />
       </section>
     </article>

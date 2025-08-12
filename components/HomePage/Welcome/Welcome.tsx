@@ -5,8 +5,8 @@ const Welcome = () => {
   const pBaseClass = 'sm:pl-5 text-lg sm:text-xl py-1';
 
   return (
-    <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border lg:flex-row p-10">
-      <section className="flex flex-1 flex-col order-2 lg:order-none">
+    <article className="m-10 flex max-w-7xl flex-col gap-6 rounded-lg border p-10 shadow-lg shadow-gray-400 lg:flex-row">
+      <section className="order-2 flex flex-1 flex-col lg:order-none">
         <ComponentElement
           className="text-blue dark:text-green mb-6 text-xl sm:text-4xl"
           componentName="Welcome"
@@ -35,7 +35,7 @@ const Welcome = () => {
           </p>
         </div>
       </section>
-      <section className="flex flex-1 items-center justify-center mb-6 lg:mb-0 lg:justify-end">
+      <section className="mb-6 flex flex-1 items-center justify-center lg:mb-0 lg:justify-end">
         <Image
           src="/Headshot.jpg"
           alt="Picture of the author"

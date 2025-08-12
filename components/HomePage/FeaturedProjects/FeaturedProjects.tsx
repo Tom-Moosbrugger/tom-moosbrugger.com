@@ -35,7 +35,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   };
 
   return (
-    <article className="m-10 flex max-w-7xl flex-col rounded-lg border px-4 py-10 sm:px-10">
+    <article className="m-10 flex max-w-7xl flex-col rounded-lg border px-4 pt-8 pb-6 shadow-lg shadow-gray-400 sm:px-10">
       <header className="mb-8 sm:mb-14">
         <ComponentElement
           className="text-blue dark:text-green text-xl sm:text-4xl"
@@ -43,27 +43,27 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         />
       </header>
       <a
-        className="flex flex-col items-center justify-center lg:mx-32"
+        className="flex flex-col items-center justify-center lg:mx-26"
         href={projects[index].githubURL}
         target="_blank"
         referrerPolicy="no-referrer"
       >
-        <div className="-mb-2 aspect-[16/9] w-full max-w-5xl overflow-hidden rounded-t-xl border border-black dark:border-white">
+        <div className="relative aspect-[3200/1800] w-full max-w-5xl overflow-hidden rounded-t-xl border border-black dark:border-white">
           <Image
             priority={index === 0}
             src={projects[index].img1}
             alt={`${projects[index].name} screenshot`}
             layout="responsive"
-            width={3390}
+            width={3200}
             height={1800}
-            className="object-cover"
+            className="object-fill"
           />
         </div>
-        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x border-b border-black py-2 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
+        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x border-b border-black py-3 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
           {projects[index].name}
         </div>
       </a>
-      <section className="flex flex-row items-center justify-center pt-10">
+      <section className="flex flex-row items-center justify-center pt-6">
         <ChevronLeftIcon
           height={40}
           width={40}

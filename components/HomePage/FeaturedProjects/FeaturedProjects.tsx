@@ -5,6 +5,7 @@ import { ProjectData } from '@/lib/types';
 import { useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Circle from '@/public/other/circle.svg';
+import Image from 'next/image';
 
 interface FeaturedProjectsProps {
   projects: ProjectData[];
@@ -34,27 +35,31 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   };
 
   return (
-    <article className="m-10 flex max-w-7xl flex-col rounded-lg border-1 px-4 sm:px-10 py-10">
+    <article className="m-10 flex max-w-7xl flex-col rounded-lg border px-4 py-10 sm:px-10">
       <header className="mb-8 sm:mb-14">
         <ComponentElement
           className="text-blue dark:text-green text-xl sm:text-4xl"
           componentName="FeaturedProjects"
         />
       </header>
-      <a 
-        className="flex flex-col items-center justify-center lg:mx-50"
+      <a
+        className="flex flex-col items-center justify-center lg:mx-32"
         href={projects[index].githubURL}
-        target='_blank'
+        target="_blank"
         referrerPolicy="no-referrer"
       >
-        <div className="aspect-video w-full max-w-3xl overflow-hidden rounded-t-xl border-1 border-black dark:border-white">
-          <img
+        <div className="-mb-2 aspect-[16/9] w-full max-w-5xl overflow-hidden rounded-t-xl border border-black dark:border-white">
+          <Image
+            priority={index === 0}
             src={projects[index].img1}
             alt={`${projects[index].name} screenshot`}
-            className="object-fit h-full w-full"
+            layout="responsive"
+            width={3390}
+            height={1800}
+            className="object-cover"
           />
         </div>
-        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x-1 border-b-1 border-black py-2 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
+        <div className="dark:bg-green bg-blue text-shadow-light w-full border-x border-b border-black py-2 text-center text-xl font-extrabold sm:text-3xl dark:border-white dark:text-black">
           {projects[index].name}
         </div>
       </a>
